@@ -1,0 +1,9 @@
+{
+  "name": "duadupla-ds-workspace",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "storybook": "npm --prefix apps/docs run storybook",
+    "build-storybook": "npm --prefix apps/docs run build-storybook"
+  }
+}

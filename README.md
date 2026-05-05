@@ -1,6 +1,23 @@
-# DuaDupla Storybook
+# DuaDupla DS Workspace
 
-Design System documentation site built with Astro + Storybook, aligned to Figma foundations and component specs.
+This repo is intentionally split into two tracks:
+
+## 1) Automation Kit (reusable)
+
+Reusable setup to automate the same workflow with other Design Systems:
+
+- agent topology: `AGENTS.md`
+- Cursor rules and skills: `.cursor/rules/`, `.cursor/skills/`
+- process and runbooks: `docs/`
+- overview: `automation/README.md`
+
+## 2) Storybook App (publishable output)
+
+Living DS documentation site in Astro + Storybook:
+
+- app root: `apps/docs`
+- stories and docs: `apps/docs/src/stories`
+- static build output: `apps/docs/storybook-static`
 
 ## Local development
 
@@ -12,25 +29,17 @@ npm run storybook
 
 Storybook runs at `http://localhost:6006`.
 
-## Build
+## Build Storybook
 
 ```bash
 cd apps/docs
 npm run build-storybook
 ```
 
-Static output is generated in `apps/docs/storybook-static`.
-
 ## Deploy to Vercel
 
-This repository includes `vercel.json` configured to:
+`vercel.json` is already configured to build and publish Storybook from `apps/docs`.
 
-- install from `apps/docs`
-- build Storybook via `npm run build-storybook`
-- publish `apps/docs/storybook-static`
-
-In Vercel:
-
-1. Import this GitHub repository.
-2. Keep detected settings or use values from `vercel.json`.
-3. Deploy.
+1. Import this GitHub repository in Vercel.
+2. Keep detected settings or use `vercel.json`.
+3. Deploy preview/production.
