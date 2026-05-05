@@ -1,0 +1,31 @@
+---
+description: React component standards for Design System implementation
+globs: **/*.{ts,tsx}
+alwaysApply: false
+---
+
+# React Component Standards
+
+## API consistency
+
+- Prefer controlled/uncontrolled patterns when applicable.
+- Keep prop names predictable across components (`size`, `variant`, `disabled`).
+- Avoid one-off props that duplicate semantic behavior.
+
+## Design token usage
+
+- Use token references, not hard-coded visual values.
+- Keep spacing, colors, typography, and radius tied to tokens.
+- If a token is missing, document the gap before adding temporary values.
+
+## Accessibility baseline
+
+- Include keyboard support for interactive components.
+- Include semantic roles and labels.
+- Include focus-visible state and contrast-safe defaults.
+
+## Testing and docs
+
+- Add component tests for primary states.
+- Add stories for default, variants, states, and edge cases.
+- Add short usage notes where behavior is non-obvious.

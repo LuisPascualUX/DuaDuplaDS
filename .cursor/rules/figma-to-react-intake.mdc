@@ -1,0 +1,27 @@
+---
+description: Standardizes Figma-to-React intake before implementation
+alwaysApply: true
+---
+
+# Figma to React Intake Rule
+
+Before implementing any React component from Figma, complete this intake:
+
+1. Confirm Figma file URL.
+2. Identify node IDs for foundations, icon set, and components.
+3. Extract design context and variables.
+4. Map tokens to code naming.
+5. Define component API contract before coding.
+
+## Do not start coding if
+
+- File URL is missing.
+- Node IDs are ambiguous.
+- Token mapping is incomplete.
+- Variant/state matrix is undefined.
+
+## Required artifacts
+
+- `docs/figma-project-input.md`
+- `docs/figma-token-mapping.md`
+- `docs/components-spec.md` (updated from Figma context)

@@ -26,5 +26,3 @@ apps/docs/debug-storybook.log
 .DS_Store
 .idea/
 
-# local cursor artifacts
-.cursor/

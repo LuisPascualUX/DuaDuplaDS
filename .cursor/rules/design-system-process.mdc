@@ -1,0 +1,29 @@
+---
+description: Enforces end-to-end Design System process from Figma to Vercel
+alwaysApply: true
+---
+
+# Design System Process Rule
+
+When working in this repository, follow this sequence unless the user explicitly overrides it:
+
+1. Foundations and tokens from Figma.
+2. React component implementation.
+3. Repository hygiene and GitHub publishing.
+4. Storybook documentation in Astro.
+5. Deployment of documentation to Vercel.
+
+## Mandatory quality gates
+
+- Never implement components without token mapping.
+- Every component must include usage examples and state coverage.
+- Docs are not complete without accessibility notes.
+- Deployment is not complete without preview verification.
+
+## Required outputs per phase
+
+- Phase 1: Token dictionary + component specification.
+- Phase 2: React components + tests + stories baseline.
+- Phase 3: GitHub-ready branch + CI pass evidence.
+- Phase 4: Storybook docs pages + navigation map.
+- Phase 5: Vercel URL + smoke test checklist.
