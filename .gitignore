@@ -1,0 +1,28 @@
+# dependencies
+node_modules/
+apps/docs/node_modules/
+
+# build outputs
+dist/
+apps/docs/dist/
+apps/docs/storybook-static/
+
+# astro
+apps/docs/.astro/
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# env
+.env
+.env.*
+
+# system/editor
+.DS_Store
+.idea/
+
+# local cursor artifacts
+.cursor/

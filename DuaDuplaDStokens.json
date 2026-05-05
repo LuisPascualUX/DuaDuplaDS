@@ -1,0 +1,818 @@
+{
+  "_Primitives / Color": {
+    "color": {
+      "primary": {
+        "50": {
+          "$value": "#f8fafc",
+          "$type": "color",
+          "$description": "Tokens de color primitivos. Representan valores cromáticos sin contexto semántico.\nSirven como base para construir tokens semánticos (brand, text, surface, status).\nNo deben ser consumidos directamente por componentes o producto."
+        },
+        "100": {
+          "$value": "#f1f5f9",
+          "$type": "color",
+          "$description": "Tokens de color primitivos. Representan valores cromáticos sin contexto semántico.\nSirven como base para construir tokens semánticos (brand, text, surface, status).\nNo deben ser consumidos directamente por componentes o producto."
+        },
+        "200": {
+          "$value": "#e2e8f0",
+          "$type": "color",
+          "$description": "Tokens de color primitivos. Representan valores cromáticos sin contexto semántico.\nSirven como base para construir tokens semánticos (brand, text, surface, status).\nNo deben ser consumidos directamente por componentes o producto."
+        },
+        "300": {
+          "$value": "#cad5e2",
+          "$type": "color",
+          "$description": "Tokens de color primitivos. Representan valores cromáticos sin contexto semántico.\nSirven como base para construir tokens semánticos (brand, text, surface, status).\nNo deben ser consumidos directamente por componentes o producto."
+        },
+        "400": {
+          "$value": "#90a1b9",
+          "$type": "color",
+          "$description": "Tokens de color primitivos. Representan valores cromáticos sin contexto semántico.\nSirven como base para construir tokens semánticos (brand, text, surface, status).\nNo deben ser consumidos directamente por componentes o producto."
+        },
+        "500": {
+          "$value": "#62748e",
+          "$type": "color",
+          "$description": "Tokens de color primitivos. Representan valores cromáticos sin contexto semántico.\nSirven como base para construir tokens semánticos (brand, text, surface, status).\nNo deben ser consumidos directamente por componentes o producto."
+        },
+        "600": {
+          "$value": "#45556c",
+          "$type": "color",
+          "$description": "Tokens de color primitivos. Representan valores cromáticos sin contexto semántico.\nSirven como base para construir tokens semánticos (brand, text, surface, status).\nNo deben ser consumidos directamente por componentes o producto."
+        },
+        "700": {
+          "$value": "#314158",
+          "$type": "color",
+          "$description": "Tokens de color primitivos. Representan valores cromáticos sin contexto semántico.\nSirven como base para construir tokens semánticos (brand, text, surface, status).\nNo deben ser consumidos directamente por componentes o producto."
+        },
+        "800": {
+          "$value": "#1d293d",
+          "$type": "color",
+          "$description": "Tokens de color primitivos. Representan valores cromáticos sin contexto semántico.\nSirven como base para construir tokens semánticos (brand, text, surface, status).\nNo deben ser consumidos directamente por componentes o producto."
+        },
+        "900": {
+          "$value": "#0f172b",
+          "$type": "color",
+          "$description": "Tokens de color primitivos. Representan valores cromáticos sin contexto semántico.\nSirven como base para construir tokens semánticos (brand, text, surface, status).\nNo deben ser consumidos directamente por componentes o producto."
+        },
+        "950": {
+          "$value": "#020618",
+          "$type": "color",
+          "$description": "Tokens de color primitivos. Representan valores cromáticos sin contexto semántico.\nSirven como base para construir tokens semánticos (brand, text, surface, status).\nNo deben ser consumidos directamente por componentes o producto."
+        },
+        "white": {
+          "$value": "#ffffff",
+          "$type": "color",
+          "$description": "Tokens de color primitivos. Representan valores cromáticos sin contexto semántico.\nSirven como base para construir tokens semánticos (brand, text, surface, status).\nNo deben ser consumidos directamente por componentes o producto."
+        }
+      },
+      "accent": {
+        "50": {
+          "$value": "#fef1f7",
+          "$type": "color",
+          "$description": "Tokens de color primitivos. Representan valores cromáticos sin contexto semántico.\nSirven como base para construir tokens semánticos (brand, text, surface, status).\nNo deben ser consumidos directamente por componentes o producto."
+        },
+        "100": {
+          "$value": "#fee6ef",
+          "$type": "color",
+          "$description": "Tokens de color primitivos. Representan valores cromáticos sin contexto semántico.\nSirven como base para construir tokens semánticos (brand, text, surface, status).\nNo deben ser consumidos directamente por componentes o producto."
+        },
+        "200": {
+          "$value": "#ffcce3",
+          "$type": "color",
+          "$description": "Tokens de color primitivos. Representan valores cromáticos sin contexto semántico.\nSirven como base para construir tokens semánticos (brand, text, surface, status).\nNo deben ser consumidos directamente por componentes o producto."
+        },
+        "300": {
+          "$value": "#ffa1cc",
+          "$type": "color",
+          "$description": "Tokens de color primitivos. Representan valores cromáticos sin contexto semántico.\nSirven como base para construir tokens semánticos (brand, text, surface, status).\nNo deben ser consumidos directamente por componentes o producto."
+        },
+        "400": {
+          "$value": "#ff5ba8",
+          "$type": "color",
+          "$description": "Tokens de color primitivos. Representan valores cromáticos sin contexto semántico.\nSirven como base para construir tokens semánticos (brand, text, surface, status).\nNo deben ser consumidos directamente por componentes o producto."
+        },
+        "500": {
+          "$value": "#ff1289",
+          "$type": "color",
+          "$description": "Tokens de color primitivos. Representan valores cromáticos sin contexto semántico.\nSirven como base para construir tokens semánticos (brand, text, surface, status).\nNo deben ser consumidos directamente por componentes o producto."
+        },
+        "600": {
+          "$value": "#ef0066",
+          "$type": "color",
+          "$description": "Tokens de color primitivos. Representan valores cromáticos sin contexto semántico.\nSirven como base para construir tokens semánticos (brand, text, surface, status).\nNo deben ser consumidos directamente por componentes o producto."
+        },
+        "700": {
+          "$value": "#cd004e",
+          "$type": "color",
+          "$description": "Tokens de color primitivos. Representan valores cromáticos sin contexto semántico.\nSirven como base para construir tokens semánticos (brand, text, surface, status).\nNo deben ser consumidos directamente por componentes o producto."
+        },
+        "800": {
+          "$value": "#a90043",
+          "$type": "color",
+          "$description": "Tokens de color primitivos. Representan valores cromáticos sin contexto semántico.\nSirven como base para construir tokens semánticos (brand, text, surface, status).\nNo deben ser consumidos directamente por componentes o producto."
+        },
+        "900": {
+          "$value": "#8b003c",
+          "$type": "color",
+          "$description": "Tokens de color primitivos. Representan valores cromáticos sin contexto semántico.\nSirven como base para construir tokens semánticos (brand, text, surface, status).\nNo deben ser consumidos directamente por componentes o producto."
+        },
+        "950": {
+          "$value": "#53001f",
+          "$type": "color",
+          "$description": "Tokens de color primitivos. Representan valores cromáticos sin contexto semántico.\nSirven como base para construir tokens semánticos (brand, text, surface, status).\nNo deben ser consumidos directamente por componentes o producto."
+        }
+      },
+      "feedback": {
+        "focus": {
+          "focuslight": {
+            "$value": "#0059f3",
+            "$type": "color",
+            "$description": "Tokens de color primitivos. Representan valores cromáticos sin contexto semántico.\nSirven como base para construir tokens semánticos (brand, text, surface, status).\nNo deben ser consumidos directamente por componentes o producto."
+          },
+          "focusdark": {
+            "$value": "#17d8ff",
+            "$type": "color",
+            "$description": "Tokens de color primitivos. Representan valores cromáticos sin contexto semántico.\nSirven como base para construir tokens semánticos (brand, text, surface, status).\nNo deben ser consumidos directamente por componentes o producto."
+          }
+        },
+        "green": {
+          "50": {
+            "$value": "#f0fdf4",
+            "$type": "color",
+            "$description": "Tokens de color primitivos. Representan valores cromáticos sin contexto semántico.\nSirven como base para construir tokens semánticos (brand, text, surface, status).\nNo deben ser consumidos directamente por componentes o producto."
+          },
+          "100": {
+            "$value": "#dcfce7",
+            "$type": "color",
+            "$description": "Tokens de color primitivos. Representan valores cromáticos sin contexto semántico.\nSirven como base para construir tokens semánticos (brand, text, surface, status).\nNo deben ser consumidos directamente por componentes o producto."
+          },
+          "200": {
+            "$value": "#b9f8cf",
+            "$type": "color",
+            "$description": "Tokens de color primitivos. Representan valores cromáticos sin contexto semántico.\nSirven como base para construir tokens semánticos (brand, text, surface, status).\nNo deben ser consumidos directamente por componentes o producto."
+          },
+          "300": {
+            "$value": "#7bf1a8",
+            "$type": "color",
+            "$description": "Tokens de color primitivos. Representan valores cromáticos sin contexto semántico.\nSirven como base para construir tokens semánticos (brand, text, surface, status).\nNo deben ser consumidos directamente por componentes o producto."
+          },
+          "400": {
+            "$value": "#05df72",
+            "$type": "color",
+            "$description": "Tokens de color primitivos. Representan valores cromáticos sin contexto semántico.\nSirven como base para construir tokens semánticos (brand, text, surface, status).\nNo deben ser consumidos directamente por componentes o producto."
+          },
+          "500": {
+            "$value": "#00c950",
+            "$type": "color",
+            "$description": "Tokens de color primitivos. Representan valores cromáticos sin contexto semántico.\nSirven como base para construir tokens semánticos (brand, text, surface, status).\nNo deben ser consumidos directamente por componentes o producto."
+          },
+          "600": {
+            "$value": "#00a63e",
+            "$type": "color",
+            "$description": "Tokens de color primitivos. Representan valores cromáticos sin contexto semántico.\nSirven como base para construir tokens semánticos (brand, text, surface, status).\nNo deben ser consumidos directamente por componentes o producto."
+          },
+          "700": {
+            "$value": "#008235",
+            "$type": "color",
+            "$description": "Tokens de color primitivos. Representan valores cromáticos sin contexto semántico.\nSirven como base para construir tokens semánticos (brand, text, surface, status).\nNo deben ser consumidos directamente por componentes o producto."
+          },
+          "800": {
+            "$value": "#016630",
+            "$type": "color",
+            "$description": "Tokens de color primitivos. Representan valores cromáticos sin contexto semántico.\nSirven como base para construir tokens semánticos (brand, text, surface, status).\nNo deben ser consumidos directamente por componentes o producto."
+          },
+          "900": {
+            "$value": "#0d542b",
+            "$type": "color",
+            "$description": "Tokens de color primitivos. Representan valores cromáticos sin contexto semántico.\nSirven como base para construir tokens semánticos (brand, text, surface, status).\nNo deben ser consumidos directamente por componentes o producto."
+          },
+          "950": {
+            "$value": "#032e15",
+            "$type": "color",
+            "$description": "Tokens de color primitivos. Representan valores cromáticos sin contexto semántico.\nSirven como base para construir tokens semánticos (brand, text, surface, status).\nNo deben ser consumidos directamente por componentes o producto."
+          }
+        },
+        "red": {
+          "50": {
+            "$value": "#fef2f2",
+            "$type": "color",
+            "$description": "Tokens de color primitivos. Representan valores cromáticos sin contexto semántico.\nSirven como base para construir tokens semánticos (brand, text, surface, status).\nNo deben ser consumidos directamente por componentes o producto."
+          },
+          "100": {
+            "$value": "#ffe2e2",
+            "$type": "color",
+            "$description": "Tokens de color primitivos. Representan valores cromáticos sin contexto semántico.\nSirven como base para construir tokens semánticos (brand, text, surface, status).\nNo deben ser consumidos directamente por componentes o producto."
+          },
+          "200": {
+            "$value": "#ffc9c9",
+            "$type": "color",
+            "$description": "Tokens de color primitivos. Representan valores cromáticos sin contexto semántico.\nSirven como base para construir tokens semánticos (brand, text, surface, status).\nNo deben ser consumidos directamente por componentes o producto."
+          },
+          "300": {
+            "$value": "#ffa2a2",
+            "$type": "color",
+            "$description": "Tokens de color primitivos. Representan valores cromáticos sin contexto semántico.\nSirven como base para construir tokens semánticos (brand, text, surface, status).\nNo deben ser consumidos directamente por componentes o producto."
+          },
+          "400": {
+            "$value": "#ff6467",
+            "$type": "color",
+            "$description": "Tokens de color primitivos. Representan valores cromáticos sin contexto semántico.\nSirven como base para construir tokens semánticos (brand, text, surface, status).\nNo deben ser consumidos directamente por componentes o producto."
+          },
+          "500": {
+            "$value": "#fb2c36",
+            "$type": "color",
+            "$description": "Tokens de color primitivos. Representan valores cromáticos sin contexto semántico.\nSirven como base para construir tokens semánticos (brand, text, surface, status).\nNo deben ser consumidos directamente por componentes o producto."
+          },
+          "600": {
+            "$value": "#e7000b",
+            "$type": "color",
+            "$description": "Tokens de color primitivos. Representan valores cromáticos sin contexto semántico.\nSirven como base para construir tokens semánticos (brand, text, surface, status).\nNo deben ser consumidos directamente por componentes o producto."
+          },
+          "700": {
+            "$value": "#c10007",
+            "$type": "color",
+            "$description": "Tokens de color primitivos. Representan valores cromáticos sin contexto semántico.\nSirven como base para construir tokens semánticos (brand, text, surface, status).\nNo deben ser consumidos directamente por componentes o producto."
+          },
+          "800": {
+            "$value": "#9f0712",
+            "$type": "color",
+            "$description": "Tokens de color primitivos. Representan valores cromáticos sin contexto semántico.\nSirven como base para construir tokens semánticos (brand, text, surface, status).\nNo deben ser consumidos directamente por componentes o producto."
+          },
+          "900": {
+            "$value": "#82181a",
+            "$type": "color",
+            "$description": "Tokens de color primitivos. Representan valores cromáticos sin contexto semántico.\nSirven como base para construir tokens semánticos (brand, text, surface, status).\nNo deben ser consumidos directamente por componentes o producto."
+          },
+          "950": {
+            "$value": "#460809",
+            "$type": "color",
+            "$description": "Tokens de color primitivos. Representan valores cromáticos sin contexto semántico.\nSirven como base para construir tokens semánticos (brand, text, surface, status).\nNo deben ser consumidos directamente por componentes o producto."
+          }
+        },
+        "amber": {
+          "50": {
+            "$value": "#fffbeb",
+            "$type": "color",
+            "$description": "Tokens de color primitivos. Representan valores cromáticos sin contexto semántico.\nSirven como base para construir tokens semánticos (brand, text, surface, status).\nNo deben ser consumidos directamente por componentes o producto."
+          },
+          "100": {
+            "$value": "#fef3c6",
+            "$type": "color",
+            "$description": "Tokens de color primitivos. Representan valores cromáticos sin contexto semántico.\nSirven como base para construir tokens semánticos (brand, text, surface, status).\nNo deben ser consumidos directamente por componentes o producto."
+          },
+          "200": {
+            "$value": "#fee685",
+            "$type": "color",
+            "$description": "Tokens de color primitivos. Representan valores cromáticos sin contexto semántico.\nSirven como base para construir tokens semánticos (brand, text, surface, status).\nNo deben ser consumidos directamente por componentes o producto."
+          },
+          "300": {
+            "$value": "#ffd230",
+            "$type": "color",
+            "$description": "Tokens de color primitivos. Representan valores cromáticos sin contexto semántico.\nSirven como base para construir tokens semánticos (brand, text, surface, status).\nNo deben ser consumidos directamente por componentes o producto."
+          },
+          "400": {
+            "$value": "#ffb900",
+            "$type": "color",
+            "$description": "Tokens de color primitivos. Representan valores cromáticos sin contexto semántico.\nSirven como base para construir tokens semánticos (brand, text, surface, status).\nNo deben ser consumidos directamente por componentes o producto."
+          },
+          "500": {
+            "$value": "#fe9a00",
+            "$type": "color",
+            "$description": "Tokens de color primitivos. Representan valores cromáticos sin contexto semántico.\nSirven como base para construir tokens semánticos (brand, text, surface, status).\nNo deben ser consumidos directamente por componentes o producto."
+          },
+          "600": {
+            "$value": "#e17100",
+            "$type": "color",
+            "$description": "Tokens de color primitivos. Representan valores cromáticos sin contexto semántico.\nSirven como base para construir tokens semánticos (brand, text, surface, status).\nNo deben ser consumidos directamente por componentes o producto."
+          },
+          "700": {
+            "$value": "#bb4d00",
+            "$type": "color",
+            "$description": "Tokens de color primitivos. Representan valores cromáticos sin contexto semántico.\nSirven como base para construir tokens semánticos (brand, text, surface, status).\nNo deben ser consumidos directamente por componentes o producto."
+          },
+          "800": {
+            "$value": "#973c00",
+            "$type": "color",
+            "$description": "Tokens de color primitivos. Representan valores cromáticos sin contexto semántico.\nSirven como base para construir tokens semánticos (brand, text, surface, status).\nNo deben ser consumidos directamente por componentes o producto."
+          },
+          "900": {
+            "$value": "#7b3306",
+            "$type": "color",
+            "$description": "Tokens de color primitivos. Representan valores cromáticos sin contexto semántico.\nSirven como base para construir tokens semánticos (brand, text, surface, status).\nNo deben ser consumidos directamente por componentes o producto."
+          },
+          "950": {
+            "$value": "#461901",
+            "$type": "color",
+            "$description": "Tokens de color primitivos. Representan valores cromáticos sin contexto semántico.\nSirven como base para construir tokens semánticos (brand, text, surface, status).\nNo deben ser consumidos directamente por componentes o producto."
+          }
+        },
+        "sky": {
+          "50": {
+            "$value": "#f0f9ff",
+            "$type": "color",
+            "$description": "Tokens de color primitivos. Representan valores cromáticos sin contexto semántico.\nSirven como base para construir tokens semánticos (brand, text, surface, status).\nNo deben ser consumidos directamente por componentes o producto."
+          },
+          "100": {
+            "$value": "#dff2fe",
+            "$type": "color",
+            "$description": "Tokens de color primitivos. Representan valores cromáticos sin contexto semántico.\nSirven como base para construir tokens semánticos (brand, text, surface, status).\nNo deben ser consumidos directamente por componentes o producto."
+          },
+          "200": {
+            "$value": "#b8e6fe",
+            "$type": "color",
+            "$description": "Tokens de color primitivos. Representan valores cromáticos sin contexto semántico.\nSirven como base para construir tokens semánticos (brand, text, surface, status).\nNo deben ser consumidos directamente por componentes o producto."
+          },
+          "300": {
+            "$value": "#74d4ff",
+            "$type": "color",
+            "$description": "Tokens de color primitivos. Representan valores cromáticos sin contexto semántico.\nSirven como base para construir tokens semánticos (brand, text, surface, status).\nNo deben ser consumidos directamente por componentes o producto."
+          },
+          "400": {
+            "$value": "#00bcff",
+            "$type": "color",
+            "$description": "Tokens de color primitivos. Representan valores cromáticos sin contexto semántico.\nSirven como base para construir tokens semánticos (brand, text, surface, status).\nNo deben ser consumidos directamente por componentes o producto."
+          },
+          "500": {
+            "$value": "#00a6f4",
+            "$type": "color",
+            "$description": "Tokens de color primitivos. Representan valores cromáticos sin contexto semántico.\nSirven como base para construir tokens semánticos (brand, text, surface, status).\nNo deben ser consumidos directamente por componentes o producto."
+          },
+          "600": {
+            "$value": "#0084d1",
+            "$type": "color",
+            "$description": "Tokens de color primitivos. Representan valores cromáticos sin contexto semántico.\nSirven como base para construir tokens semánticos (brand, text, surface, status).\nNo deben ser consumidos directamente por componentes o producto."
+          },
+          "700": {
+            "$value": "#0069a8",
+            "$type": "color",
+            "$description": "Tokens de color primitivos. Representan valores cromáticos sin contexto semántico.\nSirven como base para construir tokens semánticos (brand, text, surface, status).\nNo deben ser consumidos directamente por componentes o producto."
+          },
+          "800": {
+            "$value": "#00598a",
+            "$type": "color",
+            "$description": "Tokens de color primitivos. Representan valores cromáticos sin contexto semántico.\nSirven como base para construir tokens semánticos (brand, text, surface, status).\nNo deben ser consumidos directamente por componentes o producto."
+          },
+          "900": {
+            "$value": "#024a70",
+            "$type": "color",
+            "$description": "Tokens de color primitivos. Representan valores cromáticos sin contexto semántico.\nSirven como base para construir tokens semánticos (brand, text, surface, status).\nNo deben ser consumidos directamente por componentes o producto."
+          },
+          "950": {
+            "$value": "#052f4a",
+            "$type": "color",
+            "$description": "Tokens de color primitivos. Representan valores cromáticos sin contexto semántico.\nSirven como base para construir tokens semánticos (brand, text, surface, status).\nNo deben ser consumidos directamente por componentes o producto."
+          }
+        }
+      }
+    }
+  },
+  "_Primitives / Typography": {
+    "family": {
+      "famili01": {
+        "$value": "aeonik",
+        "$type": "fontFamily"
+      },
+      "famili02": {
+        "$value": "geist mono",
+        "$type": "fontFamily"
+      }
+    },
+    "weight": {
+      "light": {
+        "$value": "light",
+        "$type": "fontWeight"
+      },
+      "regular": {
+        "$value": "regular",
+        "$type": "fontWeight"
+      },
+      "bold": {
+        "$value": "bold",
+        "$type": "fontWeight"
+      },
+      "black": {
+        "$value": "black",
+        "$type": "fontWeight"
+      }
+    },
+    "size": {
+      "50": {
+        "$value": 12,
+        "$type": "fontSize"
+      },
+      "75": {
+        "$value": 14,
+        "$type": "fontSize"
+      },
+      "100": {
+        "$value": 16,
+        "$type": "fontSize"
+      },
+      "200": {
+        "$value": 20,
+        "$type": "fontSize"
+      },
+      "300": {
+        "$value": 24,
+        "$type": "fontSize"
+      },
+      "400": {
+        "$value": 28,
+        "$type": "fontSize"
+      },
+      "500": {
+        "$value": 32,
+        "$type": "fontSize"
+      },
+      "600": {
+        "$value": 40,
+        "$type": "fontSize"
+      },
+      "700": {
+        "$value": 60,
+        "$type": "fontSize"
+      },
+      "800": {
+        "$value": 80,
+        "$type": "fontSize"
+      }
+    },
+    "line-height": {
+      "50": {
+        "$value": 12,
+        "$type": "lineHeight"
+      },
+      "75": {
+        "$value": 16,
+        "$type": "lineHeight"
+      },
+      "100": {
+        "$value": 18,
+        "$type": "lineHeight"
+      },
+      "200": {
+        "$value": 22,
+        "$type": "lineHeight"
+      },
+      "300": {
+        "$value": 24,
+        "$type": "lineHeight"
+      },
+      "400": {
+        "$value": 28,
+        "$type": "lineHeight"
+      },
+      "500": {
+        "$value": 38,
+        "$type": "lineHeight"
+      },
+      "600": {
+        "$value": 44,
+        "$type": "lineHeight"
+      },
+      "700": {
+        "$value": 60,
+        "$type": "lineHeight"
+      },
+      "800": {
+        "$value": 80,
+        "$type": "lineHeight"
+      }
+    },
+    "letter-spacing": {
+      "1": {
+        "$value": 1,
+        "$type": "letterSpacing"
+      },
+      "neg2": {
+        "$value": -1,
+        "$type": "letterSpacing"
+      },
+      "neg1": {
+        "$value": -0.5,
+        "$type": "letterSpacing"
+      },
+      "none": {
+        "$value": 0,
+        "$type": "letterSpacing"
+      }
+    }
+  },
+  "_primitivesSpacing": {
+    "grid8": {
+      "2": {
+        "$value": 2,
+        "$type": "spacing"
+      },
+      "4": {
+        "$value": 4,
+        "$type": "spacing"
+      },
+      "8": {
+        "$value": 8,
+        "$type": "spacing"
+      },
+      "12": {
+        "$value": 12,
+        "$type": "spacing"
+      },
+      "16": {
+        "$value": 16,
+        "$type": "spacing"
+      },
+      "20": {
+        "$value": 20,
+        "$type": "spacing"
+      },
+      "24": {
+        "$value": 24,
+        "$type": "spacing"
+      },
+      "32": {
+        "$value": 32,
+        "$type": "spacing"
+      },
+      "40": {
+        "$value": 40,
+        "$type": "spacing"
+      },
+      "48": {
+        "$value": 48,
+        "$type": "spacing"
+      },
+      "64": {
+        "$value": 64,
+        "$type": "spacing"
+      },
+      "80": {
+        "$value": 80,
+        "$type": "spacing"
+      },
+      "96": {
+        "$value": 96,
+        "$type": "spacing"
+      },
+      "128": {
+        "$value": 128,
+        "$type": "spacing"
+      },
+      "none": {
+        "$value": 0,
+        "$type": "spacing"
+      }
+    },
+    "fibonacci": {
+      "1": {
+        "$value": 1,
+        "$type": "spacing"
+      },
+      "3": {
+        "$value": 3,
+        "$type": "spacing"
+      },
+      "5": {
+        "$value": 5,
+        "$type": "spacing"
+      },
+      "13": {
+        "$value": 13,
+        "$type": "spacing"
+      },
+      "21": {
+        "$value": 21,
+        "$type": "spacing"
+      },
+      "34": {
+        "$value": 34,
+        "$type": "spacing"
+      },
+      "55": {
+        "$value": 55,
+        "$type": "spacing"
+      },
+      "89": {
+        "$value": 89,
+        "$type": "spacing"
+      }
+    }
+  },
+  "borderRadii": {
+    "radius-none": {
+      "$value": 0,
+      "$type": "borderRadius"
+    },
+    "radius-2": {
+      "$value": 2,
+      "$type": "borderRadius"
+    },
+    "radius-4": {
+      "$value": 4,
+      "$type": "borderRadius"
+    },
+    "radius-8": {
+      "$value": 2,
+      "$type": "borderRadius"
+    },
+    "radius-16": {
+      "$value": 4,
+      "$type": "borderRadius"
+    },
+    "radius-full": {
+      "$value": 999,
+      "$type": "borderRadius"
+    }
+  },
+  "semanticColors": {
+    "bg": {
+      "basic": {
+        "primary": {
+          "$value": {
+            "Light": "#ffffff",
+            "Dark": "{_Primitives / Color.color.primary.950}"
+          },
+          "$type": "color"
+        },
+        "secondary": {
+          "$value": {
+            "Light": "{_Primitives / Color.color.primary.50}",
+            "Dark": "{_Primitives / Color.color.primary.900}"
+          },
+          "$type": "color"
+        },
+        "tertiary": {
+          "$value": {
+            "Light": "{_Primitives / Color.color.primary.100}",
+            "Dark": "{_Primitives / Color.color.primary.800}"
+          },
+          "$type": "color"
+        }
+      },
+      "interactive": {
+        "default": {
+          "$value": {
+            "Light": "{_Primitives / Color.color.accent.500}",
+            "Dark": "{_Primitives / Color.color.accent.500}"
+          },
+          "$type": "color"
+        },
+        "hover": {
+          "$value": {
+            "Light": "{_Primitives / Color.color.accent.400}",
+            "Dark": "{_Primitives / Color.color.accent.600}"
+          },
+          "$type": "color"
+        },
+        "hoverSecondary": {
+          "$value": {
+            "Light": "{_Primitives / Color.color.accent.100}",
+            "Dark": "{_Primitives / Color.color.accent.900}"
+          },
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": {
+            "Light": "{_Primitives / Color.color.accent.600}",
+            "Dark": "{_Primitives / Color.color.accent.400}"
+          },
+          "$type": "color"
+        },
+        "pressedSecondary": {
+          "$value": {
+            "Light": "{_Primitives / Color.color.accent.200}",
+            "Dark": "{_Primitives / Color.color.accent.900}"
+          },
+          "$type": "color"
+        },
+        "disabled1": {
+          "$value": {
+            "Light": "{_Primitives / Color.color.primary.300}",
+            "Dark": "{_Primitives / Color.color.primary.700}"
+          },
+          "$type": "color"
+        }
+      }
+    },
+    "fg": {
+      "interactivePrimary": {
+        "default": {
+          "$value": {
+            "Light": "{_Primitives / Color.color.primary.950}",
+            "Dark": "{_Primitives / Color.color.primary.950}"
+          },
+          "$type": "color"
+        },
+        "hover": {
+          "$value": {
+            "Light": "{_Primitives / Color.color.primary.950}",
+            "Dark": "{_Primitives / Color.color.primary.950}"
+          },
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": {
+            "Light": "{_Primitives / Color.color.primary.950}",
+            "Dark": "{_Primitives / Color.color.accent.950}"
+          },
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": {
+            "Light": "{_Primitives / Color.color.primary.400}",
+            "Dark": "{_Primitives / Color.color.primary.500}"
+          },
+          "$type": "color"
+        }
+      },
+      "interactiveSecundary": {
+        "default": {
+          "$value": {
+            "Light": "{_Primitives / Color.color.accent.500}",
+            "Dark": "{_Primitives / Color.color.accent.500}"
+          },
+          "$type": "color"
+        },
+        "hover": {
+          "$value": {
+            "Light": "{_Primitives / Color.color.accent.400}",
+            "Dark": "{_Primitives / Color.color.accent.400}"
+          },
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": {
+            "Light": "{_Primitives / Color.color.accent.600}",
+            "Dark": "{_Primitives / Color.color.accent.600}"
+          },
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": {
+            "Light": "{_Primitives / Color.color.primary.400}",
+            "Dark": "{_Primitives / Color.color.primary.500}"
+          },
+          "$type": "color"
+        }
+      },
+      "basic": {
+        "primary": {
+          "$value": {
+            "Light": "{_Primitives / Color.color.primary.900}",
+            "Dark": "{_Primitives / Color.color.primary.50}"
+          },
+          "$type": "color"
+        },
+        "secondary": {
+          "$value": {
+            "Light": "{_Primitives / Color.color.primary.600}",
+            "Dark": "{_Primitives / Color.color.primary.200}"
+          },
+          "$type": "color"
+        },
+        "tertiary": {
+          "$value": {
+            "Light": "{_Primitives / Color.color.primary.400}",
+            "Dark": "{_Primitives / Color.color.primary.300}"
+          },
+          "$type": "color"
+        }
+      }
+    },
+    "border": {
+      "interactive": {
+        "default": {
+          "$value": {
+            "Light": "{_Primitives / Color.color.accent.500}",
+            "Dark": "{_Primitives / Color.color.accent.500}"
+          },
+          "$type": "color"
+        },
+        "hover": {
+          "$value": {
+            "Light": "{_Primitives / Color.color.accent.400}",
+            "Dark": "{_Primitives / Color.color.accent.400}"
+          },
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": {
+            "Light": "{_Primitives / Color.color.accent.600}",
+            "Dark": "{_Primitives / Color.color.accent.600}"
+          },
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": {
+            "Light": "{_Primitives / Color.color.primary.400}",
+            "Dark": "{_Primitives / Color.color.primary.500}"
+          },
+          "$type": "color"
+        },
+        "focus": {
+          "$value": {
+            "Light": "{_Primitives / Color.color.feedback.focus.focuslight}",
+            "Dark": "{_Primitives / Color.color.feedback.focus.focusdark}"
+          },
+          "$type": "color"
+        }
+      }
+    }
+  }
+}

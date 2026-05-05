@@ -1,0 +1,6 @@
+{
+  "installCommand": "cd apps/docs && npm install",
+  "buildCommand": "cd apps/docs && npm run build-storybook",
+  "outputDirectory": "apps/docs/storybook-static",
+  "framework": "astro"
+}
