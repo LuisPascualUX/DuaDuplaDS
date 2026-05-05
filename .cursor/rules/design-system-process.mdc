@@ -19,11 +19,14 @@ When working in this repository, follow this sequence unless the user explicitly
 - Every component must include usage examples and state coverage.
 - Docs are not complete without accessibility notes.
 - Deployment is not complete without preview verification.
+- Foundations docs must include visual previews, not only tables.
+- Color accessibility labels must be computed from real contrast values (no hardcoded WCAG output).
+- Grid and aspect-ratio foundations must include proportional previews that do not clip in Storybook viewport.
 
 ## Required outputs per phase
 
 - Phase 1: Token dictionary + component specification.
 - Phase 2: React components + tests + stories baseline.
 - Phase 3: GitHub-ready branch + CI pass evidence.
-- Phase 4: Storybook docs pages + navigation map.
-- Phase 5: Vercel URL + smoke test checklist.
+- Phase 4: Storybook docs pages + navigation map + visual parity checklist pass.
+- Phase 5: Vercel URL + smoke test checklist + post-deploy Storybook validation.

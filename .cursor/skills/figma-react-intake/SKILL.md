@@ -21,6 +21,7 @@ Prepare all required context from Figma so React component implementation can st
    - `docs/figma-project-input.md`
    - `docs/figma-token-mapping.md`
    - `docs/components-spec.md`
+   - `docs/storybook-visual-targets.md`
 
 ## Intake output contract
 
@@ -31,6 +32,7 @@ Prepare all required context from Figma so React component implementation can st
   - Components
 - Token categories mapped to code naming.
 - Initial React component priority list created.
+- Storybook visual targets captured for foundations and first component batch.
 
 ## Definition of ready for implementation
 

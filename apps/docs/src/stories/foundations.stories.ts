@@ -261,92 +261,104 @@ export const TypographyScale: Story = {
           </tbody>
         </table>
       </div>
-      <div class="ds-col" style="margin-top:16px">
-        <h3>Style previews (Figma node 113:4983)</h3>
+      <div class="ds-col ds-grid-previews" style="margin-top:16px">
+        <h3>Style previews</h3>
 
         ${[
           {
             name: 'Display Lg',
-            token: '{family/famili01} - light - {size/800} - {line-height/800}',
-            specs: 'Aeonik Light · 80 / 80 · letter spacing -1px',
-            sample: 'Este es un texto Display Lg a dos lineas',
+            token: 'family01-light-800-800-neg2',
+            specsLeft: 'Aeonik<br/>Light',
+            specsRight: 'Size: 80px - 5rem<br/>Line height: 80px - 5rem<br/>Letter spacing -1px',
+            sample: 'This is a Display Lg text on two lines',
             style: "font-family:aeonik, Inter, 'Avenir Next', sans-serif; font-size:80px; line-height:80px; font-weight:250; letter-spacing:-1px;",
           },
           {
             name: 'Display Md',
-            token: '{family/famili01} - light - {size/700} - {line-height/700}',
-            specs: 'Aeonik Light · 60 / 60 · letter spacing -1px',
-            sample: 'Este es un texto Display Md a dos lineas',
+            token: 'family01-light-700-700-neg2',
+            specsLeft: 'Aeonik<br/>Light',
+            specsRight: 'Size: 60px - 3.75rem<br/>Line height: 60px - 3.75rem<br/>Letter spacing -1px',
+            sample: 'This is a Display Md text on two lines',
             style: "font-family:aeonik, Inter, 'Avenir Next', sans-serif; font-size:60px; line-height:60px; font-weight:250; letter-spacing:-1px;",
           },
           {
             name: 'Display Sm',
-            token: '{family/famili01} - regular - {size/600} - {line-height/600}',
-            specs: 'Aeonik Regular · 40 / 44 · letter spacing 0px',
-            sample: 'Este es un texto Display Sm a dos lineas',
+            token: 'family01-regular-600-600-none',
+            specsLeft: 'Aeonik<br/>Regular',
+            specsRight: 'Size: 40px - 2.5rem<br/>Line height: 44px - 2.75rem<br/>Letter spacing 0px',
+            sample: 'This is a Display Sm text on two lines',
             style: "font-family:aeonik, Inter, 'Avenir Next', sans-serif; font-size:40px; line-height:44px; font-weight:400; letter-spacing:0px;",
           },
           {
             name: 'Headline Lg',
-            token: '{family/famili01} - bold - {size/500} - {line-height/500}',
-            specs: 'Aeonik Bold · 32 / 38 · letter spacing 0px',
-            sample: 'Este es un texto Headline Lg a dos lineas',
+            token: 'family01-bold-500-500-none',
+            specsLeft: 'Aeonik<br/>Bold',
+            specsRight: 'Size: 32px - 2rem<br/>Line height: 38px - 2.375rem<br/>Letter spacing 0px',
+            sample: 'This is a Headline Lg text on two lines',
             style: "font-family:aeonik, Inter, 'Avenir Next', sans-serif; font-size:32px; line-height:38px; font-weight:700; letter-spacing:0px;",
           },
           {
             name: 'Headline Md',
-            token: '{family/famili01} - bold - {size/400} - {line-height/400}',
-            specs: 'Aeonik Bold · 28 / 28 · letter spacing 0px',
-            sample: 'Este es un texto Headline Md a dos lineas',
+            token: 'family01-bold-400-400-none',
+            specsLeft: 'Aeonik<br/>Bold',
+            specsRight: 'Size: 28px - 1.75rem<br/>Line height: 28px - 1.75rem<br/>Letter spacing 0px',
+            sample: 'This is a Headline Md text on two lines',
             style: "font-family:aeonik, Inter, 'Avenir Next', sans-serif; font-size:28px; line-height:28px; font-weight:700; letter-spacing:0px;",
           },
           {
             name: 'Title',
-            token: '{family/famili01} - regular - {size/300} - {line-height/300}',
-            specs: 'Aeonik Regular · 24 / 24 · letter spacing 0px',
-            sample: 'Este es un texto Title a dos lineas. Este es un texto Title a dos lineas',
+            token: 'family01-regular-300-300-none',
+            specsLeft: 'Aeonik<br/>Regular',
+            specsRight: 'Size: 24px - 1.5rem<br/>Line height: 24px - 1.5rem<br/>Letter spacing 0px',
+            sample: 'This is a Title text on two lines. This is a Title text on two lines.',
             style: "font-family:aeonik, Inter, 'Avenir Next', sans-serif; font-size:24px; line-height:24px; font-weight:400; letter-spacing:0px;",
           },
           {
             name: 'Subtitle',
-            token: '{family/famili01} - regular - {size/200} - {line-height/200}',
-            specs: 'Aeonik Regular · 20 / 22 · letter spacing 0px',
-            sample: 'Este es un texto Subtitle a dos lineas. Este es un texto Subtitle a dos lineas',
+            token: 'family01-regular-200-200-none',
+            specsLeft: 'Aeonik<br/>Regular',
+            specsRight: 'Size: 20px - 1.25rem<br/>Line height: 22px - 1.375rem<br/>Letter spacing 0px',
+            sample: 'This is a Subtitle text on two lines. This is a Subtitle text on two lines.',
             style: "font-family:aeonik, Inter, 'Avenir Next', sans-serif; font-size:20px; line-height:22px; font-weight:400; letter-spacing:0px;",
           },
           {
             name: 'Body Base',
-            token: '{family/famili01} - regular - {size/100} - {line-height/100}',
-            specs: 'Aeonik Regular · 16 / 18 · letter spacing 0px',
-            sample: 'Este es un texto Body base a dos lineas. Este es un texto Body base a dos lineas.',
+            token: 'family01-regular-100-100-none',
+            specsLeft: 'Aeonik<br/>Regular',
+            specsRight: 'Size: 16px - 1rem<br/>Line height: 18px - 1.125rem<br/>Letter spacing 0px',
+            sample: 'This is a Body Base text on two lines. This is a Body Base text on two lines.',
             style: "font-family:aeonik, Inter, 'Avenir Next', sans-serif; font-size:16px; line-height:18px; font-weight:400; letter-spacing:0px;",
           },
           {
             name: 'Body Bold',
-            token: '{family/famili01} - bold - {size/100} - {line-height/100}',
-            specs: 'Aeonik Bold · 16 / 18 · letter spacing 1px',
-            sample: 'Este es un texto Body bold a dos lineas. Este es un texto Body bold a dos lineas.',
+            token: 'family01-bold-100-100-1',
+            specsLeft: 'Aeonik<br/>Bold',
+            specsRight: 'Size: 16px - 1rem<br/>Line height: 18px - 1.125rem<br/>Letter spacing 1px',
+            sample: 'This is a Body Bold text on two lines. This is a Body Bold text on two lines.',
             style: "font-family:aeonik, Inter, 'Avenir Next', sans-serif; font-size:16px; line-height:18px; font-weight:700; letter-spacing:1px;",
           },
           {
             name: 'Body Code',
-            token: '{family/famili02} - regular - {size/75} - {line-height/75}',
-            specs: 'Geist Mono · 14 / 16 · letter spacing 0px',
-            sample: 'Este es un texto Body code a dos lineas. Este es un texto Body code a dos lineas.',
+            token: 'family02-regular-75-75-none',
+            specsLeft: 'Geist Mono<br/>Regular',
+            specsRight: 'Size: 14px - 0.875rem<br/>Line height: 16px - 1rem<br/>Letter spacing 0px',
+            sample: 'This is a Body Code text on two lines. This is a Body Code text on two lines.',
             style: "font-family:'geist mono', ui-monospace, SFMono-Regular, Menlo, monospace; font-size:14px; line-height:16px; font-weight:400; letter-spacing:0px;",
           },
           {
             name: 'Body Small',
-            token: '{family/famili01} - regular - {size/75} - {line-height/75}',
-            specs: 'Aeonik Regular · 14 / 16 · letter spacing 1px',
-            sample: 'Este es un texto Body small a dos lineas. Este es un texto Body small a dos lineas.',
+            token: 'family01-regular-75-75-1',
+            specsLeft: 'Aeonik<br/>Regular',
+            specsRight: 'Size: 14px - 0.875rem<br/>Line height: 16px - 1rem<br/>Letter spacing 1px',
+            sample: 'This is a Body Small text on two lines. This is a Body Small text on two lines.',
             style: "font-family:aeonik, Inter, 'Avenir Next', sans-serif; font-size:14px; line-height:16px; font-weight:400; letter-spacing:1px;",
           },
           {
             name: 'Caption',
-            token: '{family/famili01} - regular - {size/50} - {line-height/50}',
-            specs: 'Aeonik Regular · 12 / 12 · uppercase',
-            sample: 'ESTE ES UN TEXTO CAPTION A UNA LINEA.',
+            token: 'family01-regular-50-50-none',
+            specsLeft: 'Aeonik<br/>Regular',
+            specsRight: 'Size: 12px - 0.75rem<br/>Line height: 12px - 0.75rem<br/>Uppercase',
+            sample: 'THIS IS A ONE-LINE CAPTION TEXT.',
             style: "font-family:aeonik, Inter, 'Avenir Next', sans-serif; font-size:12px; line-height:12px; font-weight:400; letter-spacing:0px; text-transform:uppercase;",
           },
         ]
@@ -356,7 +368,11 @@ export const TypographyScale: Story = {
             <div class="ds-typo-left">
               <h4>${row.name}</h4>
               <p class="ds-typo-token">${row.token}</p>
-              <p class="ds-typo-spec">${row.specs}</p>
+              ${
+                row.specsLeft && row.specsRight
+                  ? `<div class="ds-typo-spec-grid"><p class="ds-typo-spec">${row.specsLeft}</p><p class="ds-typo-spec">${row.specsRight}</p></div>`
+                  : `<p class="ds-typo-spec">${row.specs}</p>`
+              }
             </div>
             <div class="ds-typo-sample" style="${row.style}">${row.sample}</div>
           </div>
@@ -433,22 +449,124 @@ export const GridAndBreakpoints: Story = {
           <tr><td>Desktop 1440</td><td>12</td><td>60px</td><td>24px</td></tr>
         </tbody>
       </table>
+      <div class="ds-col" style="margin-top:16px">
+        <h3>Grid previews</h3>
+
+        <div class="ds-grid-figma-row">
+          <aside class="ds-grid-figma-info">
+            <h4>Mobile</h4>
+            <p>Standard: 375px<br/>320px - 599px</p>
+          </aside>
+          <div class="ds-grid-figma-preview-wrap">
+            <p class="ds-grid-figma-meta">4 columns | Margin: 16px | Gutter: 12px</p>
+            <div class="ds-grid-figma-preview ds-grid-figma-mobile">
+              <span></span><span></span><span></span><span></span>
+              <div class="ds-grid-chip ds-grid-chip-1">1 Column</div>
+              <div class="ds-grid-mobile-twocols">
+                <div class="ds-grid-chip ds-grid-chip-2">2 Columns</div>
+                <div class="ds-grid-chip ds-grid-chip-2">2 Columns</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ds-grid-figma-row" style="margin-top:56px">
+          <aside class="ds-grid-figma-info">
+            <h4>Tablet</h4>
+            <p>Standard: 768px<br/>600px - 1135px</p>
+          </aside>
+          <div class="ds-grid-figma-preview-wrap">
+            <p class="ds-grid-figma-meta">6 columns | Margin: 32px | Gutter: 20px</p>
+            <div class="ds-grid-figma-preview ds-grid-figma-tablet">
+              <span></span><span></span><span></span><span></span><span></span><span></span>
+              <div class="ds-grid-chip ds-grid-chip-1">1 Column</div>
+              <div class="ds-grid-tablet-twocols">
+                <div class="ds-grid-chip ds-grid-chip-2">2 Columns</div>
+                <div class="ds-grid-chip ds-grid-chip-2">2 Columns</div>
+              </div>
+              <div class="ds-grid-tablet-threecols">
+                <div class="ds-grid-chip ds-grid-chip-2">3 Columns</div>
+                <div class="ds-grid-chip ds-grid-chip-2">3 Columns</div>
+                <div class="ds-grid-chip ds-grid-chip-2">3 Columns</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ds-grid-figma-row" style="margin-top:56px">
+          <aside class="ds-grid-figma-info">
+            <h4>Desktop</h4>
+            <p>Standard: 1440px<br/>1136px - Larger</p>
+          </aside>
+          <div class="ds-grid-figma-preview-wrap">
+            <p class="ds-grid-figma-meta">12 columns | Margin: 60px | Gutter: 24px</p>
+            <div class="ds-grid-figma-preview ds-grid-figma-desktop">
+              <span></span><span></span><span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span><span></span><span></span>
+              <div class="ds-grid-chip ds-grid-chip-1">1 Column</div>
+              <div class="ds-grid-desktop-twocols">
+                <div class="ds-grid-chip ds-grid-chip-2">2 Columns</div>
+                <div class="ds-grid-chip ds-grid-chip-2">2 Columns</div>
+              </div>
+              <div class="ds-grid-desktop-threecols">
+                <div class="ds-grid-chip ds-grid-chip-3">3 Columns</div>
+                <div class="ds-grid-chip ds-grid-chip-3">3 Columns</div>
+                <div class="ds-grid-chip ds-grid-chip-3">3 Columns</div>
+              </div>
+              <div class="ds-grid-desktop-fourcols">
+                <div class="ds-grid-chip ds-grid-chip-4">4 Columns</div>
+                <div class="ds-grid-chip ds-grid-chip-4">4 Columns</div>
+                <div class="ds-grid-chip ds-grid-chip-4">4 Columns</div>
+                <div class="ds-grid-chip ds-grid-chip-4">4 Columns</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   `,
 };
 
 export const AspectRatios: Story = {
-  render: () => `
+  render: () => {
+    const aspectItems = [
+      { label: '16:9', ratio: '16 / 9' },
+      { label: '5:4', ratio: '5 / 4' },
+      { label: '1:1', ratio: '1 / 1' },
+      { label: '4:5', ratio: '4 / 5' },
+      { label: '1:2', ratio: '1 / 2' },
+    ];
+
+    return `
     <section class="ds-panel">
       <h2>Aspect ratios</h2>
       <p class="ds-muted"><a class="ds-figma-link" href="${figmaLinks.aspect}" target="_blank" rel="noopener noreferrer">${externalOpenIcon} Go to Figma file</a></p>
-      <div class="ds-row">
-        ${['16:9', '5:4', '1:1', '4:5', '1:2']
-          .map((ratio) => `<span class="ds-badge">${ratio}</span>`)
+      <div class="ds-aspect-grid">
+        ${aspectItems
+          .map(
+            (item) => `
+              <article class="ds-aspect-card">
+                <div class="ds-aspect-preview" style="aspect-ratio: ${item.ratio};">
+                  <img
+                    class="ds-aspect-image"
+                    src="https://picsum.photos/800/500"
+                    alt="Reference preview"
+                    loading="lazy"
+                  />
+                  <span class="ds-aspect-overlay">${item.label}</span>
+                </div>
+                <div class="ds-aspect-meta">
+                  <span class="ds-badge">${item.label}</span>
+                  <span class="ds-aspect-code">aspect-ratio: ${item.ratio};</span>
+                </div>
+              </article>
+            `,
+          )
           .join('')}
       </div>
     </section>
-  `,
+  `;
+  },
 };
 
 export const FocusRing: Story = {

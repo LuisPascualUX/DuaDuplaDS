@@ -25,3 +25,4 @@ Before implementing any React component from Figma, complete this intake:
 - `docs/figma-project-input.md`
 - `docs/figma-token-mapping.md`
 - `docs/components-spec.md` (updated from Figma context)
+- `docs/storybook-visual-targets.md` (foundations and component visual acceptance criteria)

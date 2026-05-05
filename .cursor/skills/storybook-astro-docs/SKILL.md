@@ -33,9 +33,25 @@ disable-model-invocation: true
 - Accessibility notes.
 - Do and Don't examples.
 
+## Foundations visual output contract (required)
+
+- **Colors**
+  - Card per token step including token name and values in HEX, OKLCH, and HSL.
+  - WCAG status computed from contrast against black/white and shown with visual badge.
+- **Typography**
+  - Token tables grouped by family, weight, size, line height, and letter spacing.
+  - Style preview row for each text style.
+- **Grid & Breakpoints**
+  - Mobile/tablet/desktop previews with visible column overlays and labeled column-width chips.
+  - Preview layout must not overlap or clip in the docs viewport.
+- **Aspect ratio**
+  - One visual preview per ratio format using proportional containers.
+  - Optional reference image cropped by each ratio.
+
 ## Publish readiness checklist
 
 - Storybook build passes.
 - Broken links check passes.
 - At least one example story per variant.
 - Accessibility notes present in docs pages.
+- Foundations visual output contract is fully satisfied.

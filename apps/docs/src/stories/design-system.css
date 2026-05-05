@@ -2,6 +2,13 @@
   font-family: Inter, "Avenir Next", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
+:where(.sb-show-main, .sb-main-padded) {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 24px;
+}
+
 :where(#storybook-root, .sbdocs, .docs-story) h1 {
   font-weight: 600;
 }
@@ -33,11 +40,13 @@
 
 .ds-panel {
   width: min(920px, 100%);
+  margin-inline: auto;
   border: 1px solid var(--ds-color-border);
   border-radius: 16px;
   background: linear-gradient(180deg, var(--ds-color-surface), var(--ds-color-surface-soft));
   color: var(--ds-color-text);
   padding: var(--ds-space-400);
+  overflow: hidden;
 }
 
 .ds-muted {
@@ -155,15 +164,18 @@
   display: grid;
   grid-template-columns: 260px 1fr;
   gap: 16px;
-  align-items: center;
+  align-items: flex-start;
+  justify-items: start;
   border-top: 1px solid var(--ds-color-border);
-  padding-top: 12px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .ds-typo-left h4 {
   margin: 0 0 6px;
   font-size: 28px;
   line-height: 1.1;
+  font-weight: 400;
 }
 
 .ds-typo-token {
@@ -182,8 +194,15 @@
   color: #666;
 }
 
+.ds-typo-spec-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 10px;
+}
+
 .ds-typo-sample {
-  background: #f5f5f5;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
   border-radius: 6px;
   padding: 8px 12px;
   color: #111;
@@ -202,6 +221,285 @@
   opacity: 0.8;
 }
 
+.ds-grid-preview {
+  border: 1px solid var(--ds-color-border);
+  border-radius: 10px;
+  background: #fff;
+  padding: 12px;
+}
+
+.ds-grid-track {
+  border: 1px dashed #93a6c9;
+  border-radius: 6px;
+  min-height: 96px;
+  display: grid;
+  align-items: stretch;
+  margin-top: 8px;
+}
+
+.ds-grid-track span {
+  background: rgba(255, 18, 137, 0.18);
+  border: 1px solid rgba(255, 18, 137, 0.35);
+  border-radius: 4px;
+}
+
+.ds-grid-track-mobile {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  column-gap: 12px;
+  padding: 12px 16px;
+}
+
+.ds-grid-track-tablet {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  column-gap: 20px;
+  padding: 12px 32px;
+}
+
+.ds-grid-track-desktop {
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: 24px;
+  padding: 12px 60px;
+}
+
+.ds-grid-figma-row {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 8px;
+  align-items: start;
+  max-width: 100%;
+  overflow: visible;
+}
+
+.ds-grid-figma-info h4 {
+  margin: 0 0 6px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.ds-grid-figma-info p {
+  margin: 0;
+  font-size: 12px;
+  color: #666;
+  line-height: 1.4;
+}
+
+.ds-grid-figma-preview-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+  max-width: 100%;
+  overflow: visible;
+}
+
+.ds-grid-figma-meta {
+  margin: 0;
+  font-size: 12px;
+  color: #666;
+}
+
+.ds-grid-figma-preview {
+  position: relative;
+  border: 1px solid #bbb;
+  border-radius: 8px;
+  background: #fafafa;
+  display: grid;
+  align-items: stretch;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.ds-grid-figma-preview span {
+  background: #f8dfe6;
+}
+
+.ds-grid-figma-mobile {
+  --mobile-pad: clamp(8px, 4vw, 16px);
+  --mobile-gutter: 12px;
+  aspect-ratio: 375 / 812;
+  max-width: 170px;
+  height: auto;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  column-gap: var(--mobile-gutter);
+  padding: 0 var(--mobile-pad);
+}
+
+.ds-grid-figma-tablet {
+  aspect-ratio: 768 / 812;
+  height: auto;
+  max-width: 340px;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  column-gap: 20px;
+  padding: 0 clamp(16px, 4vw, 32px);
+}
+
+.ds-grid-figma-desktop {
+  --desktop-pad: clamp(20px, 5vw, 60px);
+  --desktop-gutter: 16px;
+  aspect-ratio: 1440 / 812;
+  height: auto;
+  width: min(100%, 680px);
+  max-width: 100%;
+  margin-inline: auto;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: var(--desktop-gutter);
+  padding: 0 var(--desktop-pad);
+}
+
+.ds-grid-chip {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  box-sizing: border-box;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(12, 12, 13, 0.1);
+  padding: 8px 8px;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  color: #5a5a5a;
+  white-space: nowrap;
+}
+
+.ds-grid-chip-1 { top: 12px; }
+.ds-grid-chip-c { top: 46px; }
+.ds-grid-chip-2 { top: 80px; }
+.ds-grid-chip-3 { top: 114px; }
+.ds-grid-chip-4 { top: 148px; }
+.ds-grid-chip-6 { top: 182px; }
+
+/* Mobile-specific chip widths aligned to 4-column grid */
+.ds-grid-figma-mobile .ds-grid-chip-1 {
+  left: var(--mobile-pad);
+  right: var(--mobile-pad);
+  transform: none;
+  text-align: center;
+}
+
+.ds-grid-figma-tablet .ds-grid-chip-1 {
+  left: clamp(16px, 4vw, 32px);
+  right: clamp(16px, 4vw, 32px);
+  transform: none;
+  text-align: center;
+}
+
+.ds-grid-figma-desktop .ds-grid-chip-1 {
+  left: var(--desktop-pad);
+  right: var(--desktop-pad);
+  transform: none;
+  text-align: center;
+}
+
+.ds-grid-mobile-twocols {
+  position: absolute;
+  left: var(--mobile-pad);
+  right: var(--mobile-pad);
+  top: 80px;
+  display: flex;
+  gap: var(--mobile-gutter);
+}
+
+.ds-grid-figma-mobile .ds-grid-mobile-twocols .ds-grid-chip-2 {
+  position: static;
+  transform: none;
+  flex: 1 1 0;
+  text-align: center;
+}
+
+.ds-grid-tablet-twocols {
+  position: absolute;
+  left: clamp(16px, 4vw, 32px);
+  right: clamp(16px, 4vw, 32px);
+  top: 80px;
+  display: flex;
+  gap: 20px;
+}
+
+.ds-grid-figma-tablet .ds-grid-tablet-twocols .ds-grid-chip-2 {
+  position: static;
+  transform: none;
+  flex: 1 1 0;
+  text-align: center;
+}
+
+.ds-grid-tablet-threecols {
+  position: absolute;
+  left: clamp(16px, 4vw, 32px);
+  right: clamp(16px, 4vw, 32px);
+  top: 148px;
+  display: flex;
+  gap: 20px;
+}
+
+.ds-grid-figma-tablet .ds-grid-tablet-threecols .ds-grid-chip-2 {
+  position: static;
+  transform: none;
+  flex: 1 1 0;
+  text-align: center;
+}
+
+.ds-grid-desktop-twocols {
+  position: absolute;
+  left: var(--desktop-pad);
+  right: var(--desktop-pad);
+  top: 80px;
+  display: flex;
+  gap: var(--desktop-gutter);
+}
+
+.ds-grid-figma-desktop .ds-grid-desktop-twocols .ds-grid-chip-2 {
+  position: static;
+  transform: none;
+  width: calc((100% - var(--desktop-gutter)) / 2);
+  flex: 0 0 auto;
+  text-align: center;
+}
+
+.ds-grid-desktop-threecols {
+  position: absolute;
+  left: var(--desktop-pad);
+  right: var(--desktop-pad);
+  top: 148px;
+  display: flex;
+  gap: var(--desktop-gutter);
+}
+
+.ds-grid-figma-desktop .ds-grid-desktop-threecols .ds-grid-chip-3 {
+  position: static;
+  transform: none;
+  width: calc((100% - (2 * var(--desktop-gutter))) / 3);
+  flex: 0 0 auto;
+  text-align: center;
+}
+
+.ds-grid-desktop-fourcols {
+  position: absolute;
+  left: var(--desktop-pad);
+  right: var(--desktop-pad);
+  top: 216px;
+  display: flex;
+  gap: var(--desktop-gutter);
+}
+
+.ds-grid-figma-desktop .ds-grid-desktop-fourcols .ds-grid-chip-4 {
+  position: static;
+  transform: none;
+  width: calc((100% - (3 * var(--desktop-gutter))) / 4);
+  flex: 0 0 auto;
+  text-align: center;
+}
+
+@media (max-width: 1000px) {
+  .ds-grid-figma-row {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
+
 .ds-row {
   display: flex;
   gap: 12px;
@@ -212,6 +510,14 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
+}
+
+.ds-grid-previews {
+  gap: 32px;
+}
+
+.ds-grid-previews .ds-grid-figma-row + .ds-grid-figma-row {
+  margin-top: 40px;
 }
 
 .ds-table {
@@ -244,6 +550,69 @@
   border-radius: 999px;
   border: 1px solid var(--ds-color-border);
   font-size: 12px;
+}
+
+.ds-aspect-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+}
+
+.ds-aspect-card {
+  border: 1px solid var(--ds-color-border);
+  border-radius: 10px;
+  background: #fff;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ds-aspect-preview {
+  width: 100%;
+  position: relative;
+  border-radius: 8px;
+  border: 1px solid #d8dbe2;
+  background:
+    linear-gradient(135deg, rgba(255, 18, 137, 0.12), rgba(255, 18, 137, 0.03)),
+    #f8fafc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 64px;
+  overflow: hidden;
+}
+
+.ds-aspect-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ds-aspect-overlay {
+  position: relative;
+  z-index: 1;
+  font-size: 12px;
+  font-weight: 600;
+  color: #52525b;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid #e5e7eb;
+  border-radius: 999px;
+  padding: 2px 8px;
+}
+
+.ds-aspect-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.ds-aspect-code {
+  font-size: 12px;
+  color: #64748b;
 }
 
 .ds-btn {

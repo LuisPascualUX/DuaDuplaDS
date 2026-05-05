@@ -3,7 +3,7 @@ import '../src/stories/design-system.css';
 
 const preview: Preview = {
   parameters: {
-    layout: 'centered',
+    layout: 'padded',
     controls: { expanded: true },
   },
 };

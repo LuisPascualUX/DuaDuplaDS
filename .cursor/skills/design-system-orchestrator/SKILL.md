@@ -32,6 +32,7 @@ Drive the full process from design source to published documentation with explic
 - Implementation checklist (`docs/implementation-checklist.md`).
 - Storybook documentation checklist (`docs/storybook-checklist.md`).
 - Deployment runbook (`docs/vercel-runbook.md`).
+- Storybook visual targets (`docs/storybook-visual-targets.md`).
 
 ## Success criteria
 
@@ -39,3 +40,4 @@ Drive the full process from design source to published documentation with explic
 - Stories cover major states and variants.
 - Documentation is deployable and publicly accessible.
 - Project can be handed off without tribal knowledge.
+- Foundations stories include visual previews equivalent to Figma intent (colors, typography, grid, aspect ratio, focus ring).

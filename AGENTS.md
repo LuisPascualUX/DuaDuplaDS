@@ -1,6 +1,6 @@
 # Design System Agents
 
-This repository uses a multi-agent workflow to design, build, document, and publish a Design System.
+This repository uses a reusable multi-agent workflow to design, build, document, and publish a Design System. The structure is intended to be copied to other projects with the same stack (Figma -> React -> Storybook in Astro -> Vercel).
 
 ## Agent Topology
 
@@ -33,6 +33,11 @@ This repository uses a multi-agent workflow to design, build, document, and publ
 - Documents foundations and components in Astro + Storybook.
 - Builds MDX/Docs pages and stories for each component state.
 - Enforces docs coverage for props, a11y notes, and examples.
+- Enforces visual parity for foundations previews:
+  - Color cards with token name, HEX, OKLCH, HSL, and computed WCAG badge.
+  - Typography grouped by family, weight, size, line height, and letter spacing.
+  - Grid/breakpoint previews (mobile/tablet/desktop) with proportional column chips.
+  - Aspect ratio previews with real proportional media cropping.
 
 ### 7) `vercel-deploy-agent`
 - Prepares Vercel configuration and environment variables.
@@ -46,6 +51,14 @@ Each agent must provide:
 - Validation evidence (tests, build, screenshots, or logs).
 - Open risks and pending decisions.
 - Clear "Ready for next phase" statement.
+
+## Reusable setup for new projects
+
+When reusing this agent model in another Design System project:
+- Keep agent names and responsibilities unchanged when possible.
+- Replace only project-specific references (Figma URLs, token source files, package manager, deployment URL).
+- Preserve the same quality gates and handoff contract format.
+- Keep Storybook output parity requirements as a non-optional acceptance target.
 
 ## Global Definition of Done
 
