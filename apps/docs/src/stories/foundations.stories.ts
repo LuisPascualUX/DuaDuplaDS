@@ -261,7 +261,7 @@ export const TypographyScale: Story = {
           </tbody>
         </table>
       </div>
-      <div class="ds-col ds-grid-previews" style="margin-top:16px">
+      <div class="ds-col ds-grid-previews">
         <h3>Style previews</h3>
 
         ${[

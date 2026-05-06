@@ -19,6 +19,11 @@
 
 :where(#storybook-root, .sbdocs, .docs-story) h3 {
   font-weight: 600;
+  margin: 36px 0 6px;
+}
+
+:where(#storybook-root, .sbdocs, .docs-story) :is(h2, h3):first-child {
+  margin-top: 0;
 }
 
 :root {
@@ -510,6 +515,10 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
+}
+
+.ds-panel > .ds-col + .ds-col {
+  margin-top: 56px;
 }
 
 .ds-grid-previews {
