@@ -21,7 +21,7 @@ type ButtonArgs = {
 };
 
 const meta: Meta<ButtonArgs> = {
-  title: 'Components/Button',
+  title: 'Components/Button Primary',
   argTypes: {
     label: { control: 'text' },
     size: { control: 'inline-radio', options: ['sm', 'md'] },
@@ -36,7 +36,7 @@ const meta: Meta<ButtonArgs> = {
     },
   },
   args: {
-    label: 'Primary Button',
+    label: 'Button Primary',
     size: 'md',
     status: 'Default',
     iconLeft: true,
@@ -46,7 +46,7 @@ const meta: Meta<ButtonArgs> = {
     docs: {
       description: {
         component:
-          'Button alineado al nodo Figma `50:969` con estados y tamaños reales. Fuente: https://www.figma.com/design/SCpHExkj2GDv5v07Rx9G77/Components?node-id=50-969',
+          'Button Primary alineado al nodo Figma `50:969` con estados y tamaños reales. Fuente: https://www.figma.com/design/SCpHExkj2GDv5v07Rx9G77/Components?node-id=50-969',
       },
     },
   },
@@ -88,28 +88,75 @@ export const Playground: Story = {
 export const States: Story = {
   render: () => `
     <section class="ds-panel">
-      <h2>Primary Button</h2>
-      <p class="ds-muted">Cobertura de estados desde Figma: Default, Hover, Pressed, Disabled, Focus en tamaños Sm y Md.</p>
-      <div class="ds-col">
-        <div class="ds-row">
-          <button class="ds-btn ds-btn-sm ds-btn-default"><span class="ds-btn-icon"><img src="${iconByStatus.Default}" alt="" width="16" height="16" /></span><span>Button</span><span class="ds-btn-icon"><img src="${iconByStatus.Default}" alt="" width="16" height="16" /></span></button>
-          <button class="ds-btn ds-btn-md ds-btn-default"><span class="ds-btn-icon"><img src="${iconByStatus.Default}" alt="" width="16" height="16" /></span><span>Button</span><span class="ds-btn-icon"><img src="${iconByStatus.Default}" alt="" width="16" height="16" /></span></button>
+      <h2>Status · Button Primary</h2>
+      <p class="ds-muted">Vista alineada al formato de Figma: artwork a la izquierda y especificaciones de estado/tamaño a la derecha.</p>
+      <div class="ds-col ds-state-list">
+        <div class="ds-state-exhibit">
+          <div class="ds-state-artwork">
+            <button class="ds-btn ds-btn-sm ds-btn-default"><span class="ds-btn-icon"><img src="${iconByStatus.Default}" alt="" width="16" height="16" /></span><span>Button Primary</span><span class="ds-btn-icon"><img src="${iconByStatus.Default}" alt="" width="16" height="16" /></span></button>
+            <button class="ds-btn ds-btn-md ds-btn-default"><span class="ds-btn-icon"><img src="${iconByStatus.Default}" alt="" width="16" height="16" /></span><span>Button Primary</span><span class="ds-btn-icon"><img src="${iconByStatus.Default}" alt="" width="16" height="16" /></span></button>
+          </div>
+          <aside class="ds-state-content">
+            <h3>Default</h3>
+            <p><strong>Button Primary</strong></p>
+            <p>Sizes: Sm, Md</p>
+            <p>Background color: #FF1289 <span class="ds-token-inline">bg-interactive-default</span></p>
+            <p>Text color: #020618 <span class="ds-token-inline">fg-interactiveprimary-default</span></p>
+          </aside>
         </div>
-        <div class="ds-row">
-          <button class="ds-btn ds-btn-sm ds-btn-hover"><span class="ds-btn-icon"><img src="${iconByStatus.Hover}" alt="" width="16" height="16" /></span><span>Button</span><span class="ds-btn-icon"><img src="${iconByStatus.Hover}" alt="" width="16" height="16" /></span></button>
-          <button class="ds-btn ds-btn-md ds-btn-hover"><span class="ds-btn-icon"><img src="${iconByStatus.Hover}" alt="" width="16" height="16" /></span><span>Button</span><span class="ds-btn-icon"><img src="${iconByStatus.Hover}" alt="" width="16" height="16" /></span></button>
+
+        <div class="ds-state-exhibit">
+          <div class="ds-state-artwork">
+            <button class="ds-btn ds-btn-sm ds-btn-hover"><span class="ds-btn-icon"><img src="${iconByStatus.Hover}" alt="" width="16" height="16" /></span><span>Button Primary</span><span class="ds-btn-icon"><img src="${iconByStatus.Hover}" alt="" width="16" height="16" /></span></button>
+            <button class="ds-btn ds-btn-md ds-btn-hover"><span class="ds-btn-icon"><img src="${iconByStatus.Hover}" alt="" width="16" height="16" /></span><span>Button Primary</span><span class="ds-btn-icon"><img src="${iconByStatus.Hover}" alt="" width="16" height="16" /></span></button>
+          </div>
+          <aside class="ds-state-content">
+            <h3>Hover</h3>
+            <p><strong>Button Primary</strong></p>
+            <p>Sizes: Sm, Md</p>
+            <p>Background color: #FF5BA8 <span class="ds-token-inline">bg-interactive-hover</span></p>
+          </aside>
         </div>
-        <div class="ds-row">
-          <button class="ds-btn ds-btn-sm ds-btn-pressed"><span class="ds-btn-icon"><img src="${iconByStatus.Pressed}" alt="" width="16" height="16" /></span><span>Button</span><span class="ds-btn-icon"><img src="${iconByStatus.Pressed}" alt="" width="16" height="16" /></span></button>
-          <button class="ds-btn ds-btn-md ds-btn-pressed"><span class="ds-btn-icon"><img src="${iconByStatus.Pressed}" alt="" width="16" height="16" /></span><span>Button</span><span class="ds-btn-icon"><img src="${iconByStatus.Pressed}" alt="" width="16" height="16" /></span></button>
+
+        <div class="ds-state-exhibit">
+          <div class="ds-state-artwork">
+            <button class="ds-btn ds-btn-sm ds-btn-pressed"><span class="ds-btn-icon"><img src="${iconByStatus.Pressed}" alt="" width="16" height="16" /></span><span>Button Primary</span><span class="ds-btn-icon"><img src="${iconByStatus.Pressed}" alt="" width="16" height="16" /></span></button>
+            <button class="ds-btn ds-btn-md ds-btn-pressed"><span class="ds-btn-icon"><img src="${iconByStatus.Pressed}" alt="" width="16" height="16" /></span><span>Button Primary</span><span class="ds-btn-icon"><img src="${iconByStatus.Pressed}" alt="" width="16" height="16" /></span></button>
+          </div>
+          <aside class="ds-state-content">
+            <h3>Pressed</h3>
+            <p><strong>Button Primary</strong></p>
+            <p>Sizes: Sm, Md</p>
+            <p>Background color: #EF0066 <span class="ds-token-inline">bg-interactive-pressed</span></p>
+          </aside>
         </div>
-        <div class="ds-row">
-          <button class="ds-btn ds-btn-sm ds-btn-disabled" disabled><span class="ds-btn-icon"><img src="${iconByStatus.Disabled}" alt="" width="16" height="16" /></span><span>Button</span><span class="ds-btn-icon"><img src="${iconByStatus.Disabled}" alt="" width="16" height="16" /></span></button>
-          <button class="ds-btn ds-btn-md ds-btn-disabled" disabled><span class="ds-btn-icon"><img src="${iconByStatus.Disabled}" alt="" width="16" height="16" /></span><span>Button</span><span class="ds-btn-icon"><img src="${iconByStatus.Disabled}" alt="" width="16" height="16" /></span></button>
+
+        <div class="ds-state-exhibit">
+          <div class="ds-state-artwork">
+            <button class="ds-btn ds-btn-sm ds-btn-disabled" disabled><span class="ds-btn-icon"><img src="${iconByStatus.Disabled}" alt="" width="16" height="16" /></span><span>Button Primary</span><span class="ds-btn-icon"><img src="${iconByStatus.Disabled}" alt="" width="16" height="16" /></span></button>
+            <button class="ds-btn ds-btn-md ds-btn-disabled" disabled><span class="ds-btn-icon"><img src="${iconByStatus.Disabled}" alt="" width="16" height="16" /></span><span>Button Primary</span><span class="ds-btn-icon"><img src="${iconByStatus.Disabled}" alt="" width="16" height="16" /></span></button>
+          </div>
+          <aside class="ds-state-content">
+            <h3>Disabled</h3>
+            <p><strong>Button Primary</strong></p>
+            <p>Sizes: Sm, Md</p>
+            <p>Background color: #CAD5E2 <span class="ds-token-inline">bg-interactive-disabled1</span></p>
+            <p>Text color: #90A1B9 <span class="ds-token-inline">fg-interactiveprimary-disabled</span></p>
+          </aside>
         </div>
-        <div class="ds-row">
-          <button class="ds-btn ds-btn-sm ds-btn-focus"><span class="ds-btn-icon"><img src="${iconByStatus.Focus}" alt="" width="16" height="16" /></span><span>Button</span><span class="ds-btn-icon"><img src="${iconByStatus.Focus}" alt="" width="16" height="16" /></span></button>
-          <button class="ds-btn ds-btn-md ds-btn-focus"><span class="ds-btn-icon"><img src="${iconByStatus.Focus}" alt="" width="16" height="16" /></span><span>Button</span><span class="ds-btn-icon"><img src="${iconByStatus.Focus}" alt="" width="16" height="16" /></span></button>
+
+        <div class="ds-state-exhibit">
+          <div class="ds-state-artwork">
+            <button class="ds-btn ds-btn-sm ds-btn-focus"><span class="ds-btn-icon"><img src="${iconByStatus.Focus}" alt="" width="16" height="16" /></span><span>Button Primary</span><span class="ds-btn-icon"><img src="${iconByStatus.Focus}" alt="" width="16" height="16" /></span></button>
+            <button class="ds-btn ds-btn-md ds-btn-focus"><span class="ds-btn-icon"><img src="${iconByStatus.Focus}" alt="" width="16" height="16" /></span><span>Button Primary</span><span class="ds-btn-icon"><img src="${iconByStatus.Focus}" alt="" width="16" height="16" /></span></button>
+          </div>
+          <aside class="ds-state-content">
+            <h3>Focus</h3>
+            <p><strong>Button Primary</strong></p>
+            <p>Sizes: Sm, Md</p>
+            <p>Focus ring: 2px dashed #0059F3 <span class="ds-token-inline">border-interactive-focus</span></p>
+            <p>Focus ring height: Sm 38px · Md 46px</p>
+          </aside>
         </div>
       </div>
     </section>
@@ -126,7 +173,7 @@ export const Anatomy: Story = {
   },
   render: () => `
     <section class="ds-panel">
-      <h2>Button anatomy</h2>
+      <h2>Button Primary anatomy</h2>
       <p class="ds-muted">Medidas de referencia para implementar y revisar consistencia visual.</p>
 
       <div class="ds-col">
@@ -146,12 +193,12 @@ export const Anatomy: Story = {
         <div class="ds-row">
           <button class="ds-btn ds-btn-sm ds-btn-default">
             <span class="ds-btn-icon"><img src="${iconByStatus.Default}" alt="" width="16" height="16" /></span>
-            <span>Button Sm</span>
+            <span>Button Primary Sm</span>
             <span class="ds-btn-icon"><img src="${iconByStatus.Default}" alt="" width="16" height="16" /></span>
           </button>
           <button class="ds-btn ds-btn-md ds-btn-default">
             <span class="ds-btn-icon"><img src="${iconByStatus.Default}" alt="" width="16" height="16" /></span>
-            <span>Button Md</span>
+            <span>Button Primary Md</span>
             <span class="ds-btn-icon"><img src="${iconByStatus.Default}" alt="" width="16" height="16" /></span>
           </button>
         </div>
@@ -168,12 +215,13 @@ export const Anatomy: Story = {
             </tr>
           </thead>
           <tbody>
-            <tr><td>Padding</td><td>8px 12px</td><td>12px 16px</td></tr>
-            <tr><td>Gap (icon-text)</td><td>4px</td><td>4px</td></tr>
-            <tr><td>Icon frame</td><td>16px x 16px</td><td>16px x 16px</td></tr>
-            <tr><td>Border radius</td><td>999px (pill)</td><td>999px (pill)</td></tr>
-            <tr><td>Font size</td><td>14px</td><td>16px</td></tr>
-            <tr><td>Line height</td><td>18px</td><td>18px</td></tr>
+            <tr><td>Padding</td><td>8px 12px <span class="ds-token-inline">grid8-8</span> <span class="ds-token-inline">grid8-12</span></td><td>12px 16px <span class="ds-token-inline">grid8-12</span> <span class="ds-token-inline">grid8-16</span></td></tr>
+            <tr><td>Gap (icon-text)</td><td>4px <span class="ds-token-inline">grid8-4</span></td><td>4px <span class="ds-token-inline">grid8-4</span></td></tr>
+            <tr><td>Icon frame</td><td>16px x 16px <span class="ds-token-inline">icon-slot-size-16</span></td><td>16px x 16px <span class="ds-token-inline">icon-slot-size-16</span></td></tr>
+            <tr><td>Border radius</td><td>999px (pill) <span class="ds-token-inline">radius-full</span></td><td>999px (pill) <span class="ds-token-inline">radius-full</span></td></tr>
+            <tr><td>Focus ring height</td><td>38px</td><td>46px</td></tr>
+            <tr><td>Font size</td><td>14px <span class="ds-token-inline">size-75</span></td><td>16px <span class="ds-token-inline">size-100</span></td></tr>
+            <tr><td>Line height</td><td>18px <span class="ds-token-inline">line-height-100</span></td><td>18px <span class="ds-token-inline">line-height-100</span></td></tr>
             <tr><td>Border</td><td>1px solid transparent</td><td>1px solid transparent</td></tr>
             <tr><td>Outer margin</td><td>Not defined (layout-owned)</td><td>Not defined (layout-owned)</td></tr>
           </tbody>
@@ -187,7 +235,7 @@ export const Anatomy: Story = {
             <div class="ds-anatomy-btn-wrap">
               <button class="ds-btn ds-btn-md ds-btn-default ds-anatomy-btn">
                 <span class="ds-btn-icon"><img src="${iconByStatus.Default}" alt="" width="16" height="16" /></span>
-                <span>Button</span>
+                <span>Button Primary</span>
                 <span class="ds-btn-icon"><img src="${iconByStatus.Default}" alt="" width="16" height="16" /></span>
               </button>
               <span class="ds-tag ds-tag-gap">4</span>
@@ -201,17 +249,17 @@ export const Anatomy: Story = {
           </div>
 
           <aside class="ds-anatomy-specs">
-            <h4>Primary Button</h4>
+            <h4>Button Primary</h4>
             <ul>
               <li>Direction: Horizontal</li>
               <li>Alignment: Middle center</li>
               <li>Vertical resizing: Hug</li>
               <li>Horizontal resizing: Hug</li>
               <li>Item spacing: 4</li>
-              <li>Padding top: 12</li>
-              <li>Padding bottom: 12</li>
-              <li>Padding left: 16</li>
-              <li>Padding right: 16</li>
+              <li>Padding top: 12 <span class="ds-token-inline">grid8-12</span></li>
+              <li>Padding bottom: 12 <span class="ds-token-inline">grid8-12</span></li>
+              <li>Padding left: 16 <span class="ds-token-inline">grid8-16</span></li>
+              <li>Padding right: 16 <span class="ds-token-inline">grid8-16</span></li>
             </ul>
           </aside>
         </div>

@@ -6,10 +6,16 @@ alwaysApply: false
 
 # Storybook Component Structure (Design System)
 
-For every new component story in `apps/docs/src/stories/*.stories.ts`, keep this structure aligned with the current Button implementation:
+For every new component story in `apps/docs/src/stories/*.stories.ts`, keep this structure aligned with the current Button Primary implementation:
 
 1. `Playground` story with interactive controls.
-2. `States` story with core visual states and sizes.
+2. `States` story in Figma-style exhibit format:
+   - Left side: `artwork` canvas preview (light gray background) showing component render.
+   - Right side: state title + concise attributes/spec text.
+   - Must explicitly include supported sizes in each state block (for example `Sizes: Sm, Md`).
+   - Must document the key visual token(s) per state (for example background, text, border/focus).
+   - Recommended state set (when applicable): `Default`, `Hover`, `Pressed`, `Disabled`, `Focus`.
+   - Keep Figma enum naming exactly as defined for each component (for example `Focus` vs `Focused`).
 3. `Anatomy` story including:
    - `Figma live reference` section with:
      - direct Figma link to the source node
@@ -22,3 +28,4 @@ Implementation notes:
 - Reuse shared DS classes in `design-system.css` when possible.
 - Keep spacing and heading hierarchy consistent with existing foundations/component docs.
 - Avoid hardcoded one-off inline styles when equivalent reusable CSS classes can be created.
+- Keep `States` and `Anatomy` nomenclature consistent across components for predictable docs navigation.

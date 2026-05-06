@@ -18,7 +18,12 @@ Current extraction status:
 - `fileKey` Foundations: `q1DhMnfeyHxS2xDPA9dtj8`
 - `fileKey` Icons: `oIAmonaBjQ28Ue9fB1bXXj`
 - `fileKey` Components: `SCpHExkj2GDv5v07Rx9G77`
-- `node-id`: missing in the shared URLs; required for deep extraction with `get_design_context`.
+- Verified component node IDs for extraction:
+  - `Button Primary`: `50:969`
+  - `Button Primary Status`: `67:4219`
+  - `Button Primary Anatomy`: `67:4389`
+  - `Button Secondary`: `67:4587`
+  - `Button Tertiary`: `67:5209` (section), component set `63:3161`
 
 Optional:
 - Patterns/Templates node URL: `PASTE_HERE`
@@ -38,9 +43,9 @@ Optional:
 
 ## 5) Priority component list
 
-1. `Button`
-2. `Pending`
-3. `Pending`
+1. `Button Primary`
+2. `Button Secondary`
+3. `Button Tertiary`
 4. `Pending`
 5. `Pending`
 

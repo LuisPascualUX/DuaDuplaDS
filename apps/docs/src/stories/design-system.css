@@ -569,6 +569,66 @@
   font-size: 12px;
 }
 
+.ds-token-inline {
+  display: inline-flex;
+  align-items: center;
+  padding: 1px 6px;
+  border-radius: 999px;
+  border: 1px solid #dbe4ee;
+  background: #f8fafc;
+  color: #334155;
+  font-size: 11px;
+  line-height: 1.2;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  vertical-align: middle;
+}
+
+.ds-state-list {
+  gap: 24px;
+}
+
+.ds-state-exhibit {
+  display: grid;
+  grid-template-columns: minmax(260px, 360px) 1fr;
+  gap: 28px;
+  align-items: center;
+}
+
+.ds-state-artwork {
+  background: #f2f2f2;
+  border-radius: 0;
+  min-height: 190px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 16px;
+}
+
+.ds-state-artwork-stack {
+  flex-direction: column;
+}
+
+.ds-state-content h3 {
+  margin: 0 0 10px;
+  font-size: 36px;
+  line-height: 1.1;
+}
+
+.ds-state-content p {
+  margin: 0 0 6px;
+  font-size: 14px;
+  color: #111827;
+}
+
+@media (max-width: 900px) {
+  .ds-state-exhibit {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    align-items: start;
+  }
+}
+
 .ds-aspect-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -646,6 +706,10 @@
   position: relative;
 }
 
+.ds-btn > span:not(.ds-btn-icon) {
+  white-space: nowrap;
+}
+
 .ds-btn-sm {
   padding: 8px 12px;
   font-size: 0.875rem;
@@ -680,13 +744,15 @@
   background: #ef0066;
 }
 
-.ds-btn-default:focus-visible::after {
+.ds-btn-default:focus-visible::after,
+.ds-btn-focus::after,
+.ds-btn-secondary-focus::after {
   content: "";
   position: absolute;
-  left: -2px;
-  right: -2px;
-  top: -2px;
-  bottom: -2px;
+  left: -4px;
+  right: -4px;
+  top: -4px;
+  bottom: -4px;
   border: 2px dashed #0059f3;
   border-radius: 999px;
   pointer-events: none;
@@ -713,16 +779,125 @@
   color: #020618;
 }
 
-.ds-btn-focus::after {
+
+.ds-btn-secondary {
+  border: 2px solid #ff1289;
+  color: #ff1289;
+  background: transparent;
+}
+
+.ds-btn-tertiary {
+  border: 0;
+  border-bottom: 2px solid #ff1289;
+  border-radius: 0;
+  color: #ff1289;
+  background: transparent;
+}
+
+.ds-btn-tertiary-default {
+  border-bottom-color: #ff1289;
+  color: #ff1289;
+  background: transparent;
+}
+
+.ds-btn-tertiary-default:hover {
+  border-bottom-color: #ff5ba8;
+  color: #ff5ba8;
+  background: #fee6ef;
+}
+
+.ds-btn-tertiary-default:active {
+  border-bottom-color: #ef0066;
+  color: #ef0066;
+  background: #ffcce3;
+}
+
+.ds-btn-tertiary-hover {
+  border-bottom-color: #ff5ba8;
+  color: #ff5ba8;
+  background: #fee6ef;
+}
+
+.ds-btn-tertiary-pressed {
+  border-bottom-color: #ef0066;
+  color: #ef0066;
+  background: #ffcce3;
+}
+
+.ds-btn-tertiary-disabled {
+  border-bottom-color: #90a1b9;
+  color: #90a1b9;
+  background: #cad5e2;
+}
+
+.ds-btn-tertiary-focus {
+  border-bottom-color: #ff1289;
+  color: #ff1289;
+  background: transparent;
+}
+
+.ds-btn-tertiary-focus::after {
   content: "";
   position: absolute;
-  left: -2px;
-  right: -2px;
-  top: -2px;
-  bottom: -2px;
+  left: -4px;
+  right: -4px;
+  top: -4px;
+  bottom: -4px;
   border: 2px dashed #0059f3;
-  border-radius: 999px;
+  border-radius: 0;
   pointer-events: none;
+}
+
+.ds-btn.ds-btn-tertiary:disabled {
+  opacity: 1;
+}
+
+.ds-btn-secondary-default {
+  border-color: #ff1289;
+  color: #ff1289;
+  background: transparent;
+}
+
+.ds-btn-secondary-default:hover {
+  border-color: #ff5ba8;
+  color: #ff5ba8;
+  background: #fee6ef;
+}
+
+.ds-btn-secondary-default:active {
+  border-color: #ef0066;
+  color: #ef0066;
+  background: #ffcce3;
+}
+
+.ds-btn-secondary-hover {
+  border-color: #ff5ba8;
+  color: #ff5ba8;
+  background: #fee6ef;
+}
+
+.ds-btn-secondary-pressed {
+  border-color: #ef0066;
+  color: #ef0066;
+  background: #ffcce3;
+}
+
+.ds-btn-secondary-disabled {
+  border-color: #90a1b9;
+  color: #90a1b9;
+  background: #cad5e2;
+}
+
+.ds-btn-secondary-focus {
+  border-color: #ff1289;
+  color: #ff1289;
+  background: transparent;
+}
+
+
+.ds-btn-secondary:disabled {
+  opacity: 1;
+  cursor: not-allowed;
 }
 
 .ds-btn:disabled {
@@ -730,74 +905,8 @@
   cursor: not-allowed;
 }
 
-.ds-anatomy-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 12px;
-}
-
-.ds-anatomy-card {
-  border: 1px solid var(--ds-color-border);
-  border-radius: 10px;
-  background: #fff;
-  padding: 12px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.ds-anatomy-title {
-  margin: 0;
-  font-size: 13px;
-  color: var(--ds-color-text-muted);
-}
-
-.ds-anatomy-shell {
-  border: 1px dashed #93a6c9;
-  border-radius: 999px;
-  background: #f8fafc;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.ds-anatomy-shell-sm {
-  padding: 8px 12px;
-}
-
-.ds-anatomy-shell-md {
-  padding: 12px 16px;
-}
-
-.ds-anatomy-content {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-}
-
-.ds-anatomy-icon {
-  width: 16px;
-  height: 16px;
-  border-radius: 4px;
-  border: 1px solid #cad5e2;
-  background: #fff;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 9px;
-  color: #45556c;
-}
-
-.ds-anatomy-label {
-  font-size: 14px;
-  line-height: 18px;
-  color: #020618;
-}
-
-.ds-anatomy-legend {
-  margin: 0;
-  font-size: 12px;
-  color: #45556c;
+.ds-btn.ds-btn-secondary:disabled {
+  opacity: 1;
 }
 
 .ds-anatomy-figma {

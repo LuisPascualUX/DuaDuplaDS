@@ -12,6 +12,13 @@ Use this table-style structure while implementing.
 ## Color
 - Figma token: `color.surface.default` -> Code token: `--ds-color-surface-default`
 - Figma token: `color.text.default` -> Code token: `--ds-color-text-default`
+- Figma token: `border/interactive/default` -> Code token: `--ds-color-primary` (`#FF1289`)
+- Figma token: `border/interactive/hover` -> Code token: `--ds-color-primary-hover` (`#FF5BA8`)
+- Figma token: `border/interactive/pressed` -> Code token: `--ds-color-primary-active` (`#EF0066`)
+- Figma token: `border/interactive/disabled` -> Code token: `--ds-color-text-disabled` (`#90A1B9`)
+- Figma token: `bg/interactive/hoversecondary` -> Code fallback: `#FEE6EF`
+- Figma token: `bg/interactive/pressedsecondary` -> Code fallback: `#FFCCE3`
+- Figma token: `bg/interactive/disabled1` -> Code token: `--ds-color-border` (`#CAD5E2`)
 
 ## Typography
 - Figma token: `typography.body.md.size` -> Code token: `--ds-font-size-body-md`
