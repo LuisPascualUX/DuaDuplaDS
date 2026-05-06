@@ -1,0 +1,24 @@
+---
+description: Enforce Storybook component anatomy documentation structure
+globs: apps/docs/src/stories/*.stories.ts
+alwaysApply: false
+---
+
+# Storybook Component Structure (Design System)
+
+For every new component story in `apps/docs/src/stories/*.stories.ts`, keep this structure aligned with the current Button implementation:
+
+1. `Playground` story with interactive controls.
+2. `States` story with core visual states and sizes.
+3. `Anatomy` story including:
+   - `Figma live reference` section with:
+     - direct Figma link to the source node
+     - embedded Figma iframe (`https://www.figma.com/embed?...`)
+   - `Visual reference` section with rendered component variants
+   - `Measurements` section with concrete values (padding, gap, radius, sizing, typography)
+   - `Blueprint` section with inspect-style visual annotations + attribute list
+
+Implementation notes:
+- Reuse shared DS classes in `design-system.css` when possible.
+- Keep spacing and heading hierarchy consistent with existing foundations/component docs.
+- Avoid hardcoded one-off inline styles when equivalent reusable CSS classes can be created.

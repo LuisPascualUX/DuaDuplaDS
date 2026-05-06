@@ -8,6 +8,10 @@ const iconByStatus: Record<'Default' | 'Hover' | 'Pressed' | 'Disabled' | 'Focus
   Focus: 'https://www.figma.com/api/mcp/asset/84468324-2d9f-4ccd-aeb6-bdcca9aceec0',
 };
 
+const figmaButtonAnatomyUrl =
+  'https://www.figma.com/design/SCpHExkj2GDv5v07Rx9G77/Components?node-id=67-4389&t=oyhem46qxpUxRxBT-4';
+const figmaButtonAnatomyEmbedUrl = `https://www.figma.com/embed?embed_host=storybook&url=${encodeURIComponent(figmaButtonAnatomyUrl)}`;
+
 type ButtonArgs = {
   label: string;
   size: 'sm' | 'md';
@@ -81,36 +85,6 @@ export const Playground: Story = {
   },
 };
 
-export const IconBooleans: Story = {
-  parameters: {
-    docs: {
-      description: {
-        story: 'Documentación de `iconLeft` y `iconRight` como boolean para mostrar/ocultar iconos.',
-      },
-    },
-  },
-  render: () => `
-    <section class="ds-panel">
-      <h2>Icon booleans</h2>
-      <p class="ds-muted">Combinaciones de visibilidad de iconos left/right.</p>
-      <div class="ds-col">
-        <div class="ds-row">
-          <button class="ds-btn ds-btn-md ds-btn-default"><span class="ds-btn-icon"><img src="${iconByStatus.Default}" alt="" width="16" height="16" /></span><span>iconLeft=true iconRight=true</span><span class="ds-btn-icon"><img src="${iconByStatus.Default}" alt="" width="16" height="16" /></span></button>
-        </div>
-        <div class="ds-row">
-          <button class="ds-btn ds-btn-md ds-btn-default"><span class="ds-btn-icon"><img src="${iconByStatus.Default}" alt="" width="16" height="16" /></span><span>iconLeft=true iconRight=false</span></button>
-        </div>
-        <div class="ds-row">
-          <button class="ds-btn ds-btn-md ds-btn-default"><span>iconLeft=false iconRight=false</span></button>
-        </div>
-        <div class="ds-row">
-          <button class="ds-btn ds-btn-md ds-btn-default"><span>iconLeft=false iconRight=true</span><span class="ds-btn-icon"><img src="${iconByStatus.Default}" alt="" width="16" height="16" /></span></button>
-        </div>
-      </div>
-    </section>
-  `,
-};
-
 export const States: Story = {
   render: () => `
     <section class="ds-panel">
@@ -136,6 +110,110 @@ export const States: Story = {
         <div class="ds-row">
           <button class="ds-btn ds-btn-sm ds-btn-focus"><span class="ds-btn-icon"><img src="${iconByStatus.Focus}" alt="" width="16" height="16" /></span><span>Button</span><span class="ds-btn-icon"><img src="${iconByStatus.Focus}" alt="" width="16" height="16" /></span></button>
           <button class="ds-btn ds-btn-md ds-btn-focus"><span class="ds-btn-icon"><img src="${iconByStatus.Focus}" alt="" width="16" height="16" /></span><span>Button</span><span class="ds-btn-icon"><img src="${iconByStatus.Focus}" alt="" width="16" height="16" /></span></button>
+        </div>
+      </div>
+    </section>
+  `,
+};
+
+export const Anatomy: Story = {
+  parameters: {
+    docs: {
+      description: {
+        story: 'Anatomía del botón con medidas base de layout y espaciado para tamaños `sm` y `md`.',
+      },
+    },
+  },
+  render: () => `
+    <section class="ds-panel">
+      <h2>Button anatomy</h2>
+      <p class="ds-muted">Medidas de referencia para implementar y revisar consistencia visual.</p>
+
+      <div class="ds-col">
+        <h3>Figma live reference</h3>
+        <p class="ds-muted">
+          <a class="ds-figma-link" href="${figmaButtonAnatomyUrl}" target="_blank" rel="noopener noreferrer">Open in Figma</a>
+        </p>
+        <iframe
+          class="ds-figma-embed"
+          src="${figmaButtonAnatomyEmbedUrl}"
+          allowfullscreen
+        ></iframe>
+      </div>
+
+      <div class="ds-col">
+        <h3>Visual reference</h3>
+        <div class="ds-row">
+          <button class="ds-btn ds-btn-sm ds-btn-default">
+            <span class="ds-btn-icon"><img src="${iconByStatus.Default}" alt="" width="16" height="16" /></span>
+            <span>Button Sm</span>
+            <span class="ds-btn-icon"><img src="${iconByStatus.Default}" alt="" width="16" height="16" /></span>
+          </button>
+          <button class="ds-btn ds-btn-md ds-btn-default">
+            <span class="ds-btn-icon"><img src="${iconByStatus.Default}" alt="" width="16" height="16" /></span>
+            <span>Button Md</span>
+            <span class="ds-btn-icon"><img src="${iconByStatus.Default}" alt="" width="16" height="16" /></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="ds-col">
+        <h3>Measurements</h3>
+        <table class="ds-table">
+          <thead>
+            <tr>
+              <th>Property</th>
+              <th>Sm</th>
+              <th>Md</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Padding</td><td>8px 12px</td><td>12px 16px</td></tr>
+            <tr><td>Gap (icon-text)</td><td>4px</td><td>4px</td></tr>
+            <tr><td>Icon frame</td><td>16px x 16px</td><td>16px x 16px</td></tr>
+            <tr><td>Border radius</td><td>999px (pill)</td><td>999px (pill)</td></tr>
+            <tr><td>Font size</td><td>14px</td><td>16px</td></tr>
+            <tr><td>Line height</td><td>18px</td><td>18px</td></tr>
+            <tr><td>Border</td><td>1px solid transparent</td><td>1px solid transparent</td></tr>
+            <tr><td>Outer margin</td><td>Not defined (layout-owned)</td><td>Not defined (layout-owned)</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="ds-col">
+        <h3>Blueprint</h3>
+        <div class="ds-anatomy-figma">
+          <div class="ds-anatomy-canvas">
+            <div class="ds-anatomy-btn-wrap">
+              <button class="ds-btn ds-btn-md ds-btn-default ds-anatomy-btn">
+                <span class="ds-btn-icon"><img src="${iconByStatus.Default}" alt="" width="16" height="16" /></span>
+                <span>Button</span>
+                <span class="ds-btn-icon"><img src="${iconByStatus.Default}" alt="" width="16" height="16" /></span>
+              </button>
+              <span class="ds-tag ds-tag-gap">4</span>
+              <span class="ds-tag ds-tag-top">12</span>
+              <span class="ds-tag ds-tag-left">16</span>
+              <span class="ds-tag ds-tag-right">16</span>
+              <span class="ds-tag ds-tag-bottom">12</span>
+              <span class="ds-anatomy-line ds-anatomy-line-h"></span>
+              <span class="ds-anatomy-line ds-anatomy-line-v"></span>
+            </div>
+          </div>
+
+          <aside class="ds-anatomy-specs">
+            <h4>Primary Button</h4>
+            <ul>
+              <li>Direction: Horizontal</li>
+              <li>Alignment: Middle center</li>
+              <li>Vertical resizing: Hug</li>
+              <li>Horizontal resizing: Hug</li>
+              <li>Item spacing: 4</li>
+              <li>Padding top: 12</li>
+              <li>Padding bottom: 12</li>
+              <li>Padding left: 16</li>
+              <li>Padding right: 16</li>
+            </ul>
+          </aside>
         </div>
       </div>
     </section>
