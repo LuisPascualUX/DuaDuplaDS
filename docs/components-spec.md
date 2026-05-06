@@ -119,6 +119,69 @@ Primary action trigger for user flows.
     - Pressed border/text `#EF0066`, bg `#FFCCE3`
     - Disabled border/text `#90A1B9`, bg `#CAD5E2`
 
+- `Icon Button Primary`
+  - Storybook path: `Components/Icon Button Primary`
+  - Figma source: `nodeId 74:11934` (`COMPONENT_SET`), section node `81:23133`
+  - Status enum: `Default | Hover | Pressed | Disabled | Focus`
+  - Sizes: `sm`, `md`
+  - Layout contract:
+    - Horizontal auto-layout, center/center
+    - Fixed width: `32` (Sm), `40` (Md)
+    - Padding: `8` (Md), `8` with horizontal `12` in Sm
+    - Corner radius: `999`
+    - Icon size: `16` (Sm), `24` (Md)
+  - Focus contract:
+    - `focusRing` present in `Status=Focus`
+    - Offset: start/end `-2`
+    - Height: `46` (Md), `38` (Sm)
+  - Color contract:
+    - Default bg `#FF1289`
+    - Hover bg `#FF5BA8`
+    - Pressed bg `#EF0066`
+    - Disabled bg `#CAD5E2`
+
+- `Icon Button Secondary`
+  - Storybook path: `Components/Icon Button Secondary`
+  - Figma source: `nodeId 75:12079`
+  - Status enum: `Default | Hover | Pressed | Disabled | Focused`
+  - Sizes: `sm`, `md`
+  - Layout contract:
+    - Horizontal auto-layout, center/center
+    - Fixed width: `32` (Sm), `40` (Md)
+    - Padding: `8` (Md), `8` with horizontal `12` in Sm
+    - Corner radius: `999`
+    - Stroke width: `2`
+    - Icon size: `16` (Sm), `24` (Md)
+  - Focus contract:
+    - `focusRing` present in `Status=Focused`
+    - Dashed style
+  - Color contract:
+    - Default border `#FF1289`
+    - Hover border `#FF5BA8`, bg `#FEE6EF`
+    - Pressed border `#EF0066`, bg `#FFCCE3`
+    - Disabled border `#90A1B9`, bg `#CAD5E2`
+
+- `Icon Button Tertiary`
+  - Storybook path: `Components/Icon Button Tertiary`
+  - Figma source: `nodeId 75:12348`
+  - Status enum: `Default | Hover | Pressed | Disabled | Focused`
+  - Sizes: `sm`, `md`
+  - Layout contract:
+    - Horizontal auto-layout, center/center
+    - Fixed width: `32` (Sm), `40` (Md)
+    - Padding: `8` (Md), `8` with horizontal `12` in Sm
+    - Corner radius: `999`
+    - Stroke: `none`
+    - Icon size: `16` (Sm), `24` (Md)
+  - Focus contract:
+    - `focusRing` present in `Status=Focused`
+    - Dashed style
+  - Color contract:
+    - Default icon `#FF1289`
+    - Hover icon `#FF5BA8`, bg `#FEE6EF`
+    - Pressed icon `#EF0066`, bg `#FFCCE3`
+    - Disabled icon `#90A1B9`, bg `#CAD5E2`
+
 ## Test requirements
 - Render test.
 - Interaction test.

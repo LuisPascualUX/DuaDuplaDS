@@ -24,6 +24,9 @@ Current extraction status:
   - `Button Primary Anatomy`: `67:4389`
   - `Button Secondary`: `67:4587`
   - `Button Tertiary`: `67:5209` (section), component set `63:3161`
+  - `Icon Button Primary`: `81:23133` (section), component set `74:11934`
+  - `Icon Button Secondary`: `75:12079`
+  - `Icon Button Tertiary`: `75:12348`
 
 Optional:
 - Patterns/Templates node URL: `PASTE_HERE`
@@ -46,8 +49,9 @@ Optional:
 1. `Button Primary`
 2. `Button Secondary`
 3. `Button Tertiary`
-4. `Pending`
-5. `Pending`
+4. `Icon Button Primary`
+5. `Icon Button Secondary`
+6. `Icon Button Tertiary`
 
 ## 6) Constraints
 

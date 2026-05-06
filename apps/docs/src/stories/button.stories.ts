@@ -98,7 +98,6 @@ export const States: Story = {
           </div>
           <aside class="ds-state-content">
             <h3>Default</h3>
-            <p><strong>Button Primary</strong></p>
             <p>Sizes: Sm, Md</p>
             <p>Background color: #FF1289 <span class="ds-token-inline">bg-interactive-default</span></p>
             <p>Text color: #020618 <span class="ds-token-inline">fg-interactiveprimary-default</span></p>
@@ -112,7 +111,6 @@ export const States: Story = {
           </div>
           <aside class="ds-state-content">
             <h3>Hover</h3>
-            <p><strong>Button Primary</strong></p>
             <p>Sizes: Sm, Md</p>
             <p>Background color: #FF5BA8 <span class="ds-token-inline">bg-interactive-hover</span></p>
           </aside>
@@ -125,7 +123,6 @@ export const States: Story = {
           </div>
           <aside class="ds-state-content">
             <h3>Pressed</h3>
-            <p><strong>Button Primary</strong></p>
             <p>Sizes: Sm, Md</p>
             <p>Background color: #EF0066 <span class="ds-token-inline">bg-interactive-pressed</span></p>
           </aside>
@@ -138,7 +135,6 @@ export const States: Story = {
           </div>
           <aside class="ds-state-content">
             <h3>Disabled</h3>
-            <p><strong>Button Primary</strong></p>
             <p>Sizes: Sm, Md</p>
             <p>Background color: #CAD5E2 <span class="ds-token-inline">bg-interactive-disabled1</span></p>
             <p>Text color: #90A1B9 <span class="ds-token-inline">fg-interactiveprimary-disabled</span></p>
@@ -152,7 +148,6 @@ export const States: Story = {
           </div>
           <aside class="ds-state-content">
             <h3>Focus</h3>
-            <p><strong>Button Primary</strong></p>
             <p>Sizes: Sm, Md</p>
             <p>Focus ring: 2px dashed #0059F3 <span class="ds-token-inline">border-interactive-focus</span></p>
             <p>Focus ring height: Sm 38px · Md 46px</p>

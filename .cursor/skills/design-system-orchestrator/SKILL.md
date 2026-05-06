@@ -41,3 +41,7 @@ Drive the full process from design source to published documentation with explic
 - Documentation is deployable and publicly accessible.
 - Project can be handed off without tribal knowledge.
 - Foundations stories include visual previews equivalent to Figma intent (colors, typography, grid, aspect ratio, focus ring).
+- Component docs keep standardized Storybook `States`/`Anatomy` presentation:
+  - white preview canvases
+  - compact state labels
+  - no repeated component-name row in each state card

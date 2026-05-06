@@ -10,8 +10,10 @@ For every new component story in `apps/docs/src/stories/*.stories.ts`, keep this
 
 1. `Playground` story with interactive controls.
 2. `States` story in Figma-style exhibit format:
-   - Left side: `artwork` canvas preview (light gray background) showing component render.
+   - Left side: `artwork` canvas preview (white background) showing component render.
    - Right side: state title + concise attributes/spec text.
+   - Keep state title compact (small heading style; approximately half of large display size used in early prototypes).
+   - Do not repeat the component name inside each state detail block when the component context is already clear from the story title.
    - Must explicitly include supported sizes in each state block (for example `Sizes: Sm, Md`).
    - Must document the key visual token(s) per state (for example background, text, border/focus).
    - Recommended state set (when applicable): `Default`, `Hover`, `Pressed`, `Disabled`, `Focus`.
@@ -20,7 +22,7 @@ For every new component story in `apps/docs/src/stories/*.stories.ts`, keep this
    - `Figma live reference` section with:
      - direct Figma link to the source node
      - embedded Figma iframe (`https://www.figma.com/embed?...`)
-   - `Visual reference` section with rendered component variants
+   - `Visual reference` section with rendered component variants on white preview canvas
    - `Measurements` section with concrete values (padding, gap, radius, sizing, typography)
    - `Blueprint` section with inspect-style visual annotations + attribute list
 

@@ -38,8 +38,9 @@ This document defines reusable visual acceptance criteria for Design System docu
 For each component documented in the first release (for example `Button Primary`, `Button Secondary`):
 - Story for playground/controls.
 - State matrix (default, hover, pressed, disabled, focus) in Figma-style exhibit layout:
-  - left: artwork preview block
-  - right: state label + component attributes + color/token values
+  - left: artwork preview block on white canvas
+  - right: compact state label + component attributes + color/token values
+  - avoid repeating the component name in every state card when already present in story context
 - Variant/size coverage.
 - Icon toggles/slots where applicable.
 - Accessibility notes and keyboard behavior summary.
@@ -47,7 +48,7 @@ For each component documented in the first release (for example `Button Primary`
 - Token references should be visually distinguishable (token chip/pill style), not plain text.
 - Anatomy story with:
   - Figma live reference (link + embed)
-  - Visual reference
+  - Visual reference on white preview canvas
   - Measurements table
   - Blueprint/inspect-like section
 

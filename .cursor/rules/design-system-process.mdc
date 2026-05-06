@@ -20,6 +20,7 @@ When working in this repository, follow this sequence unless the user explicitly
 - Docs are not complete without accessibility notes.
 - Deployment is not complete without preview verification.
 - Foundations docs must include visual previews, not only tables.
+- Component `States` and `Anatomy` preview canvases must use white backgrounds unless a component-specific exception is documented.
 - Color accessibility labels must be computed from real contrast values (no hardcoded WCAG output).
 - Grid and aspect-ratio foundations must include proportional previews that do not clip in Storybook viewport.
 

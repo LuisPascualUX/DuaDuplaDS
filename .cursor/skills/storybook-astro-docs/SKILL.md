@@ -32,6 +32,11 @@ disable-model-invocation: true
 - Variants and states.
 - Accessibility notes.
 - Do and Don't examples.
+- `States` exhibit cards with:
+  - white artwork preview canvas
+  - compact state headings (small visual hierarchy)
+  - no redundant component-name line inside each state block
+- `Anatomy` previews on white canvas for visual consistency with `States`.
 
 ## Foundations visual output contract (required)
 

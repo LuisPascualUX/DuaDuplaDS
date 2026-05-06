@@ -595,7 +595,7 @@
 }
 
 .ds-state-artwork {
-  background: #f2f2f2;
+  background: #ffffff;
   border-radius: 0;
   min-height: 190px;
   display: flex;
@@ -611,7 +611,7 @@
 
 .ds-state-content h3 {
   margin: 0 0 10px;
-  font-size: 36px;
+  font-size: 18px;
   line-height: 1.1;
 }
 
@@ -909,6 +909,229 @@
   opacity: 1;
 }
 
+.ds-btn-icon-primary {
+  border: 1px solid transparent;
+  border-radius: 999px;
+  box-sizing: border-box;
+  background: #ff1289;
+  color: #020618;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  padding: 8px;
+}
+
+.ds-btn-icon-primary .ds-btn-icon {
+  width: auto;
+  height: auto;
+}
+
+.ds-btn-icon-sm {
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  padding: 8px 12px;
+  border-radius: 999px;
+}
+
+.ds-btn-icon-md {
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  padding: 8px;
+  border-radius: 999px;
+}
+
+.ds-btn-icon-primary-default {
+  background: #ff1289;
+}
+
+.ds-btn-icon-primary-default:hover {
+  background: #ff5ba8;
+}
+
+.ds-btn-icon-primary-default:active {
+  background: #ef0066;
+}
+
+.ds-btn-icon-primary-hover {
+  background: #ff5ba8;
+}
+
+.ds-btn-icon-primary-pressed {
+  background: #ef0066;
+}
+
+.ds-btn-icon-primary-disabled {
+  background: #cad5e2;
+}
+
+.ds-btn-icon-primary-focus {
+  background: #ff1289;
+}
+
+.ds-btn-icon-primary-focus::after {
+  content: "";
+  position: absolute;
+  left: -4px;
+  right: -4px;
+  top: -4px;
+  bottom: -4px;
+  border: 2px dashed #0059f3;
+  border-radius: 999px;
+  pointer-events: none;
+}
+
+.ds-btn.ds-btn-icon-primary:disabled {
+  opacity: 1;
+}
+
+.ds-btn-icon-secondary {
+  border: 2px solid #ff1289;
+  border-radius: 999px;
+  box-sizing: border-box;
+  background: transparent;
+  color: #ff1289;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  padding: 8px;
+}
+
+.ds-btn-icon-secondary .ds-btn-icon {
+  width: auto;
+  height: auto;
+}
+
+.ds-btn-icon-secondary-default {
+  border-color: #ff1289;
+  color: #ff1289;
+  background: transparent;
+}
+
+.ds-btn-icon-secondary-default:hover {
+  border-color: #ff5ba8;
+  color: #ff5ba8;
+  background: #fee6ef;
+}
+
+.ds-btn-icon-secondary-default:active {
+  border-color: #ef0066;
+  color: #ef0066;
+  background: #ffcce3;
+}
+
+.ds-btn-icon-secondary-hover {
+  border-color: #ff5ba8;
+  color: #ff5ba8;
+  background: #fee6ef;
+}
+
+.ds-btn-icon-secondary-pressed {
+  border-color: #ef0066;
+  color: #ef0066;
+  background: #ffcce3;
+}
+
+.ds-btn-icon-secondary-disabled {
+  border-color: #90a1b9;
+  color: #90a1b9;
+  background: #cad5e2;
+}
+
+.ds-btn-icon-secondary-focused {
+  border-color: #ff1289;
+  color: #ff1289;
+  background: transparent;
+}
+
+.ds-btn-icon-secondary-focused::after {
+  content: "";
+  position: absolute;
+  left: -4px;
+  right: -4px;
+  top: -4px;
+  bottom: -4px;
+  border: 2px dashed #0059f3;
+  border-radius: 999px;
+  pointer-events: none;
+}
+
+.ds-btn.ds-btn-icon-secondary:disabled {
+  opacity: 1;
+}
+
+.ds-btn-icon-tertiary {
+  border: 0;
+  border-radius: 999px;
+  box-sizing: border-box;
+  background: transparent;
+  color: #ff1289;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  padding: 8px;
+}
+
+.ds-btn-icon-tertiary .ds-btn-icon {
+  width: auto;
+  height: auto;
+}
+
+.ds-btn-icon-tertiary-default {
+  color: #ff1289;
+  background: transparent;
+}
+
+.ds-btn-icon-tertiary-default:hover {
+  color: #ff5ba8;
+  background: #fee6ef;
+}
+
+.ds-btn-icon-tertiary-default:active {
+  color: #ef0066;
+  background: #ffcce3;
+}
+
+.ds-btn-icon-tertiary-hover {
+  color: #ff5ba8;
+  background: #fee6ef;
+}
+
+.ds-btn-icon-tertiary-pressed {
+  color: #ef0066;
+  background: #ffcce3;
+}
+
+.ds-btn-icon-tertiary-disabled {
+  color: #90a1b9;
+  background: #cad5e2;
+}
+
+.ds-btn-icon-tertiary-focused {
+  color: #ff1289;
+  background: transparent;
+}
+
+.ds-btn-icon-tertiary-focused::after {
+  content: "";
+  position: absolute;
+  left: -4px;
+  right: -4px;
+  top: -4px;
+  bottom: -4px;
+  border: 2px dashed #0059f3;
+  border-radius: 999px;
+  pointer-events: none;
+}
+
+.ds-btn.ds-btn-icon-tertiary:disabled {
+  opacity: 1;
+}
+
 .ds-anatomy-figma {
   display: grid;
   grid-template-columns: minmax(320px, 1fr) minmax(220px, 280px);
@@ -917,7 +1140,7 @@
 }
 
 .ds-anatomy-canvas {
-  background: #f2f2f2;
+  background: #ffffff;
   border-radius: 8px;
   border: 1px solid #e2e8f0;
   min-height: 250px;

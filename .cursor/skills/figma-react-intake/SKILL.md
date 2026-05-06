@@ -33,6 +33,7 @@ Prepare all required context from Figma so React component implementation can st
 - Token categories mapped to code naming.
 - Initial React component priority list created.
 - Storybook visual targets captured for foundations and first component batch.
+- Storybook component presentation constraints captured for reuse (white `States`/`Anatomy` preview canvases, compact state headings, no repeated component-name row in each state block).
 
 ## Definition of ready for implementation
 

@@ -33,6 +33,10 @@ This repository uses a reusable multi-agent workflow to design, build, document,
 - Documents foundations and components in Astro + Storybook.
 - Builds MDX/Docs pages and stories for each component state.
 - Enforces docs coverage for props, a11y notes, and examples.
+- Enforces `States` and `Anatomy` formatting conventions for reusability:
+  - White preview canvases for state artwork and anatomy blueprint sections.
+  - State heading labels kept compact (small-size headings).
+  - No repeated component-name line inside each state detail block.
 - Enforces visual parity for foundations previews:
   - Color cards with token name, HEX, OKLCH, HSL, and computed WCAG badge.
   - Typography grouped by family, weight, size, line height, and letter spacing.

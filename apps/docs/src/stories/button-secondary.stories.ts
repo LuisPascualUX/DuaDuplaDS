@@ -92,7 +92,6 @@ export const States: Story = {
           </div>
           <aside class="ds-state-content">
             <h3>Default</h3>
-            <p><strong>Button Secondary</strong></p>
             <p>Sizes: Sm, Md</p>
             <p>Border color: #FF1289 <span class="ds-token-inline">border-interactive-default</span></p>
             <p>Text color: #FF1289 <span class="ds-token-inline">fg-interactivesecondary-default</span></p>
@@ -106,7 +105,6 @@ export const States: Story = {
           </div>
           <aside class="ds-state-content">
             <h3>Hover</h3>
-            <p><strong>Button Secondary</strong></p>
             <p>Sizes: Sm, Md</p>
             <p>Background color: #FEE6EF <span class="ds-token-inline">bg-interactive-hoversecondary</span></p>
             <p>Border/text color: #FF5BA8 <span class="ds-token-inline">border/fg-interactive-hover</span></p>
@@ -120,7 +118,6 @@ export const States: Story = {
           </div>
           <aside class="ds-state-content">
             <h3>Pressed</h3>
-            <p><strong>Button Secondary</strong></p>
             <p>Sizes: Sm, Md</p>
             <p>Background color: #FFCCE3 <span class="ds-token-inline">bg-interactive-pressedsecondary</span></p>
             <p>Border/text color: #EF0066 <span class="ds-token-inline">border/fg-interactive-pressed</span></p>
@@ -134,7 +131,6 @@ export const States: Story = {
           </div>
           <aside class="ds-state-content">
             <h3>Disabled</h3>
-            <p><strong>Button Secondary</strong></p>
             <p>Sizes: Sm, Md</p>
             <p>Background color: #CAD5E2 <span class="ds-token-inline">bg-interactive-disabled1</span></p>
             <p>Border/text color: #90A1B9 <span class="ds-token-inline">border/fg-interactive-disabled</span></p>
@@ -148,7 +144,6 @@ export const States: Story = {
           </div>
           <aside class="ds-state-content">
             <h3>Focused</h3>
-            <p><strong>Button Secondary</strong></p>
             <p>Sizes: Sm, Md</p>
             <p>Border color: #FF1289 <span class="ds-token-inline">border-interactive-default</span></p>
             <p>Focus ring: 2px dashed #0059F3 <span class="ds-token-inline">border-interactive-focus</span></p>
