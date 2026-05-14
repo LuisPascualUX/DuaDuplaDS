@@ -1,0 +1,114 @@
+{
+  "version": "1.0.0",
+  "recipes": [
+    {
+      "id": "auth-login-basic",
+      "name": "Auth Login Basic",
+      "description": "Login screen footer actions.",
+      "layout": "vertical-form",
+      "nodes": [
+        {
+          "componentId": "text-input",
+          "props": {
+            "variant": "default",
+            "size": "md",
+            "status": "Default",
+            "label": "Email",
+            "placeholder": "tu@email.com"
+          },
+          "intentTags": ["form_input", "credential_input"]
+        },
+        {
+          "componentId": "button",
+          "props": {
+            "variant": "primary",
+            "size": "md",
+            "status": "Default",
+            "label": "Iniciar sesion"
+          },
+          "intentTags": ["primary_action"]
+        },
+        {
+          "componentId": "button",
+          "props": {
+            "variant": "tertiary",
+            "size": "md",
+            "status": "Default",
+            "label": "Recuperar contrasena"
+          },
+          "intentTags": ["secondary_action"]
+        }
+      ]
+    },
+    {
+      "id": "profile-edit-basic",
+      "name": "Profile Edit Basic",
+      "description": "Form with inputs, selection controls and feedback + actions.",
+      "layout": "vertical-form",
+      "nodes": [
+        {
+          "componentId": "text-input",
+          "props": {
+            "variant": "default",
+            "size": "md",
+            "status": "Default",
+            "label": "Nombre completo",
+            "placeholder": "Tu nombre"
+          },
+          "intentTags": ["form_input", "data_entry"]
+        },
+        {
+          "componentId": "select",
+          "props": {
+            "variant": "default",
+            "size": "md",
+            "status": "Default",
+            "label": "Pais",
+            "optionsCount": "4plus"
+          },
+          "intentTags": ["form_input", "choice_input"]
+        },
+        {
+          "componentId": "checkbox",
+          "props": {
+            "variant": "default",
+            "size": "md",
+            "status": "Unchecked",
+            "label": "Quiero recibir novedades"
+          },
+          "intentTags": ["consent"]
+        },
+        {
+          "componentId": "alert",
+          "props": {
+            "variant": "info",
+            "size": "md",
+            "status": "Default",
+            "title": "Recuerda guardar tus cambios"
+          },
+          "intentTags": ["feedback"]
+        },
+        {
+          "componentId": "button",
+          "props": {
+            "variant": "primary",
+            "size": "md",
+            "status": "Default",
+            "label": "Guardar cambios"
+          },
+          "intentTags": ["primary_action"]
+        },
+        {
+          "componentId": "button",
+          "props": {
+            "variant": "secondary",
+            "size": "md",
+            "status": "Default",
+            "label": "Cancelar"
+          },
+          "intentTags": ["secondary_action"]
+        }
+      ]
+    }
+  ]
+}

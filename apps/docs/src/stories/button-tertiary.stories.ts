@@ -1,11 +1,14 @@
 import type { Meta, StoryObj } from '@storybook/html';
+import { renderTextButton, wrapPlayground } from '../components/buttons';
+
+const PLAYGROUND_ICON = '/iconography/circle-plus.svg';
 
 const iconByStatus: Record<'Default' | 'Hover' | 'Pressed' | 'Disabled' | 'Focused', string> = {
-  Default: 'https://www.figma.com/api/mcp/asset/a5ec5143-5532-40a7-bd4e-709db093c3eb',
-  Hover: 'https://www.figma.com/api/mcp/asset/03738b94-9d8c-43a1-897a-9d0fca92ecae',
-  Pressed: 'https://www.figma.com/api/mcp/asset/d15b8ff7-8451-441f-b0ed-3daeeed7e02d',
-  Disabled: 'https://www.figma.com/api/mcp/asset/a0af5253-0124-4742-aa56-89becb937610',
-  Focused: 'https://www.figma.com/api/mcp/asset/77c3faac-4500-467a-8c6c-839ec5635376',
+  Default: PLAYGROUND_ICON,
+  Hover: PLAYGROUND_ICON,
+  Pressed: PLAYGROUND_ICON,
+  Disabled: PLAYGROUND_ICON,
+  Focused: PLAYGROUND_ICON,
 };
 
 const figmaButtonTertiaryUrl =
@@ -69,24 +72,60 @@ export const Playground: Story = {
     const statusClass = statusToClass(status);
     const disabled = status === 'Disabled';
     const icon = iconByStatus[status];
-    return `
-      <button class="ds-btn ds-btn-tertiary ds-btn-${size} ${statusClass}" ${disabled ? 'disabled' : ''}>
-        ${iconLeft ? `<span class="ds-btn-icon"><img src="${icon}" alt="" width="16" height="16" /></span>` : ''}
-        <span>${label}</span>
-        ${iconRight ? `<span class="ds-btn-icon"><img src="${icon}" alt="" width="16" height="16" /></span>` : ''}
-      </button>
-    `;
+    return wrapPlayground(
+      renderTextButton({
+        baseClass: 'ds-btn ds-btn-tertiary',
+        size,
+        statusClass,
+        label,
+        iconLeft,
+        iconRight,
+        iconSrc: icon,
+        iconSize: 16,
+        disabled,
+      }),
+    );
   },
 };
 
-export const States: Story = {
+export const Usage: Story = {
+  parameters: {
+    controls: { disable: true },
+    options: {
+      showToolbar: false,
+    },
+    previewTabs: {
+      canvas: { hidden: true },
+    },
+    viewMode: 'docs',
+    docs: {
+      canvas: {
+        withToolbar: false,
+      },
+      description: {
+        story: 'Guia de uso que combina estados y anatomia del Button Tertiary.',
+      },
+    },
+  },
   render: () => `
     <section class="ds-panel">
-      <h2>Status · Button Tertiary</h2>
-      <p class="ds-muted">Vista alineada al formato de Figma: artwork a la izquierda y especificaciones de estado/tamaño a la derecha.</p>
+      <header class="ds-detail-header">
+        <p class="ds-detail-kicker">Component detail</p>
+        <h2 class="ds-detail-title">Button Tertiary</h2>
+        <p class="ds-detail-subtitle">Boton terciario para acciones discretas con borde inferior, sin contenedor. Esta vista de usage combina estados visuales y anatomia tecnica en una sola pagina.</p>
+        <div class="ds-detail-meta">
+          <span class="ds-badge">Type: Action button</span>
+          <span class="ds-badge">Sizes: Sm, Md</span>
+          <span class="ds-badge">States: 5</span>
+        </div>
+      </header>
+      <div class="ds-detail-section">
+        <h3>States</h3>
+        <p class="ds-muted">Vista alineada al formato de Figma: artwork a la izquierda y especificaciones de estado/tamano a la derecha.</p>
+      </div>
       <div class="ds-col ds-state-list">
         <div class="ds-state-exhibit">
-          <div class="ds-state-artwork ds-state-artwork-stack">
+          <div class="ds-state-artwork">
             <button class="ds-btn ds-btn-tertiary ds-btn-sm ds-btn-tertiary-default"><span class="ds-btn-icon"><img src="${iconByStatus.Default}" alt="" width="16" height="16" /></span><span>Button Tertiary</span><span class="ds-btn-icon"><img src="${iconByStatus.Default}" alt="" width="16" height="16" /></span></button>
             <button class="ds-btn ds-btn-tertiary ds-btn-md ds-btn-tertiary-default"><span class="ds-btn-icon"><img src="${iconByStatus.Default}" alt="" width="16" height="16" /></span><span>Button Tertiary</span><span class="ds-btn-icon"><img src="${iconByStatus.Default}" alt="" width="16" height="16" /></span></button>
           </div>
@@ -99,7 +138,7 @@ export const States: Story = {
         </div>
 
         <div class="ds-state-exhibit">
-          <div class="ds-state-artwork ds-state-artwork-stack">
+          <div class="ds-state-artwork">
             <button class="ds-btn ds-btn-tertiary ds-btn-sm ds-btn-tertiary-hover"><span class="ds-btn-icon"><img src="${iconByStatus.Hover}" alt="" width="16" height="16" /></span><span>Button Tertiary</span><span class="ds-btn-icon"><img src="${iconByStatus.Hover}" alt="" width="16" height="16" /></span></button>
             <button class="ds-btn ds-btn-tertiary ds-btn-md ds-btn-tertiary-hover"><span class="ds-btn-icon"><img src="${iconByStatus.Hover}" alt="" width="16" height="16" /></span><span>Button Tertiary</span><span class="ds-btn-icon"><img src="${iconByStatus.Hover}" alt="" width="16" height="16" /></span></button>
           </div>
@@ -112,7 +151,7 @@ export const States: Story = {
         </div>
 
         <div class="ds-state-exhibit">
-          <div class="ds-state-artwork ds-state-artwork-stack">
+          <div class="ds-state-artwork">
             <button class="ds-btn ds-btn-tertiary ds-btn-sm ds-btn-tertiary-pressed"><span class="ds-btn-icon"><img src="${iconByStatus.Pressed}" alt="" width="16" height="16" /></span><span>Button Tertiary</span><span class="ds-btn-icon"><img src="${iconByStatus.Pressed}" alt="" width="16" height="16" /></span></button>
             <button class="ds-btn ds-btn-tertiary ds-btn-md ds-btn-tertiary-pressed"><span class="ds-btn-icon"><img src="${iconByStatus.Pressed}" alt="" width="16" height="16" /></span><span>Button Tertiary</span><span class="ds-btn-icon"><img src="${iconByStatus.Pressed}" alt="" width="16" height="16" /></span></button>
           </div>
@@ -125,7 +164,7 @@ export const States: Story = {
         </div>
 
         <div class="ds-state-exhibit">
-          <div class="ds-state-artwork ds-state-artwork-stack">
+          <div class="ds-state-artwork">
             <button class="ds-btn ds-btn-tertiary ds-btn-sm ds-btn-tertiary-disabled" disabled><span class="ds-btn-icon"><img src="${iconByStatus.Disabled}" alt="" width="16" height="16" /></span><span>Button Tertiary</span><span class="ds-btn-icon"><img src="${iconByStatus.Disabled}" alt="" width="16" height="16" /></span></button>
             <button class="ds-btn ds-btn-tertiary ds-btn-md ds-btn-tertiary-disabled" disabled><span class="ds-btn-icon"><img src="${iconByStatus.Disabled}" alt="" width="16" height="16" /></span><span>Button Tertiary</span><span class="ds-btn-icon"><img src="${iconByStatus.Disabled}" alt="" width="16" height="16" /></span></button>
           </div>
@@ -138,7 +177,7 @@ export const States: Story = {
         </div>
 
         <div class="ds-state-exhibit">
-          <div class="ds-state-artwork ds-state-artwork-stack">
+          <div class="ds-state-artwork">
             <button class="ds-btn ds-btn-tertiary ds-btn-sm ds-btn-tertiary-focus"><span class="ds-btn-icon"><img src="${iconByStatus.Focused}" alt="" width="16" height="16" /></span><span>Button Tertiary</span><span class="ds-btn-icon"><img src="${iconByStatus.Focused}" alt="" width="16" height="16" /></span></button>
             <button class="ds-btn ds-btn-tertiary ds-btn-md ds-btn-tertiary-focus"><span class="ds-btn-icon"><img src="${iconByStatus.Focused}" alt="" width="16" height="16" /></span><span>Button Tertiary</span><span class="ds-btn-icon"><img src="${iconByStatus.Focused}" alt="" width="16" height="16" /></span></button>
           </div>
@@ -150,15 +189,11 @@ export const States: Story = {
           </aside>
         </div>
       </div>
-    </section>
-  `,
-};
 
-export const Anatomy: Story = {
-  render: () => `
-    <section class="ds-panel">
-      <h2>Button Tertiary anatomy</h2>
-      <p class="ds-muted">Medidas de referencia para implementar y revisar consistencia visual.</p>
+      <div class="ds-col ds-detail-section">
+        <h3>Anatomy</h3>
+        <p class="ds-muted">Medidas de referencia para implementar y revisar consistencia visual con trazabilidad directa a Figma.</p>
+      </div>
 
       <div class="ds-col">
         <h3>Figma live reference</h3>
@@ -234,6 +269,20 @@ export const Anatomy: Story = {
               <li>Padding right: 16 <span class="ds-token-inline">grid8-16</span></li>
             </ul>
           </aside>
+        </div>
+      </div>
+
+      <div class="ds-col ds-detail-section">
+        <h3>Accessibility notes</h3>
+        <div class="ds-detail-a11y">
+          <article>
+            <h4>Keyboard</h4>
+            <p>El estado <span class="ds-token-inline">Focused</span> requiere anillo visible y suficiente contraste sobre el fondo aun sin contenedor visible.</p>
+          </article>
+          <article>
+            <h4>Disabled behavior</h4>
+            <p>Cuando esta deshabilitado no debe responder a hover o click y debe mantener semantica disabled en HTML.</p>
+          </article>
         </div>
       </div>
     </section>

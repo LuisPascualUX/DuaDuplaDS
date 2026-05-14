@@ -31,3 +31,7 @@ When working in this repository, follow this sequence unless the user explicitly
 - Phase 3: GitHub-ready branch + CI pass evidence.
 - Phase 4: Storybook docs pages + navigation map + visual parity checklist pass.
 - Phase 5: Vercel URL + smoke test checklist + post-deploy Storybook validation.
+
+## Cursor: añadir componente con enlace Figma
+
+Para un flujo guiado con URL de Figma: comando **`/add-new-component`** o skill **`add-new-ds-component`** (`.cursor/skills/add-new-ds-component/SKILL.md`). En este repositorio la implementación en `apps/docs` es Storybook HTML + TypeScript (render helpers), no un paquete React, salvo indicación explícita del backlog.

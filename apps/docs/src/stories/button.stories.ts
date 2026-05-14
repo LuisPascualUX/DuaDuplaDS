@@ -1,11 +1,14 @@
 import type { Meta, StoryObj } from '@storybook/html';
+import { renderTextButton, wrapPlayground } from '../components/buttons';
+
+const PLAYGROUND_ICON = '/iconography/circle-plus.svg';
 
 const iconByStatus: Record<'Default' | 'Hover' | 'Pressed' | 'Disabled' | 'Focus', string> = {
-  Default: 'https://www.figma.com/api/mcp/asset/84468324-2d9f-4ccd-aeb6-bdcca9aceec0',
-  Hover: 'https://www.figma.com/api/mcp/asset/c3a0eb95-a771-408b-a1c8-e48e1e9e003c',
-  Pressed: 'https://www.figma.com/api/mcp/asset/2c0b2bdb-7aee-4add-82a3-c7575379f317',
-  Disabled: 'https://www.figma.com/api/mcp/asset/03a67101-a3ee-4635-a5e8-37a467d58b6c',
-  Focus: 'https://www.figma.com/api/mcp/asset/84468324-2d9f-4ccd-aeb6-bdcca9aceec0',
+  Default: PLAYGROUND_ICON,
+  Hover: PLAYGROUND_ICON,
+  Pressed: PLAYGROUND_ICON,
+  Disabled: PLAYGROUND_ICON,
+  Focus: PLAYGROUND_ICON,
 };
 
 const figmaButtonAnatomyUrl =
@@ -75,21 +78,57 @@ export const Playground: Story = {
     const statusClass = statusToClass(status);
     const disabled = status === 'Disabled';
     const icon = iconByStatus[status];
-    return `
-      <button class="ds-btn ds-btn-${size} ${statusClass}" ${disabled ? 'disabled' : ''}>
-        ${iconLeft ? `<span class="ds-btn-icon"><img src="${icon}" alt="" width="16" height="16" /></span>` : ''}
-        <span>${label}</span>
-        ${iconRight ? `<span class="ds-btn-icon"><img src="${icon}" alt="" width="16" height="16" /></span>` : ''}
-      </button>
-    `;
+    return wrapPlayground(
+      renderTextButton({
+        baseClass: 'ds-btn',
+        size,
+        statusClass,
+        label,
+        iconLeft,
+        iconRight,
+        iconSrc: icon,
+        iconSize: 16,
+        disabled,
+      }),
+    );
   },
 };
 
-export const States: Story = {
+export const Usage: Story = {
+  parameters: {
+    controls: { disable: true },
+    options: {
+      showToolbar: false,
+    },
+    previewTabs: {
+      canvas: { hidden: true },
+    },
+    viewMode: 'docs',
+    docs: {
+      canvas: {
+        withToolbar: false,
+      },
+      description: {
+        story: 'Guia de uso que combina estados y anatomia del Button Primary.',
+      },
+    },
+  },
   render: () => `
     <section class="ds-panel">
-      <h2>Status · Button Primary</h2>
-      <p class="ds-muted">Vista alineada al formato de Figma: artwork a la izquierda y especificaciones de estado/tamaño a la derecha.</p>
+      <header class="ds-detail-header">
+        <p class="ds-detail-kicker">Component detail</p>
+        <h2 class="ds-detail-title">Button Primary</h2>
+        <p class="ds-detail-subtitle">Boton principal para acciones de mayor jerarquia. Esta vista de usage combina estados visuales y anatomia tecnica en una sola pagina.</p>
+        <div class="ds-detail-meta">
+          <span class="ds-badge">Type: Action button</span>
+          <span class="ds-badge">Sizes: Sm, Md</span>
+          <span class="ds-badge">States: 5</span>
+        </div>
+      </header>
+      <div class="ds-detail-section">
+        <h3>States</h3>
+        <p class="ds-muted">Vista alineada al formato de Figma: artwork a la izquierda y especificaciones de estado/tamano a la derecha.</p>
+      </div>
       <div class="ds-col ds-state-list">
         <div class="ds-state-exhibit">
           <div class="ds-state-artwork">
@@ -154,22 +193,11 @@ export const States: Story = {
           </aside>
         </div>
       </div>
-    </section>
-  `,
-};
 
-export const Anatomy: Story = {
-  parameters: {
-    docs: {
-      description: {
-        story: 'Anatomía del botón con medidas base de layout y espaciado para tamaños `sm` y `md`.',
-      },
-    },
-  },
-  render: () => `
-    <section class="ds-panel">
-      <h2>Button Primary anatomy</h2>
-      <p class="ds-muted">Medidas de referencia para implementar y revisar consistencia visual.</p>
+      <div class="ds-col ds-detail-section">
+        <h3>Anatomy</h3>
+        <p class="ds-muted">Medidas de referencia para implementar y revisar consistencia visual con trazabilidad directa a Figma.</p>
+      </div>
 
       <div class="ds-col">
         <h3>Figma live reference</h3>
@@ -257,6 +285,20 @@ export const Anatomy: Story = {
               <li>Padding right: 16 <span class="ds-token-inline">grid8-16</span></li>
             </ul>
           </aside>
+        </div>
+      </div>
+
+      <div class="ds-col ds-detail-section">
+        <h3>Accessibility notes</h3>
+        <div class="ds-detail-a11y">
+          <article>
+            <h4>Keyboard</h4>
+            <p>El estado <span class="ds-token-inline">Focus</span> requiere anillo visible y navegacion por tab sin perdida de contraste.</p>
+          </article>
+          <article>
+            <h4>Disabled behavior</h4>
+            <p>Cuando esta deshabilitado no debe responder a hover o click y debe mantener semantica disabled en HTML.</p>
+          </article>
         </div>
       </div>
     </section>

@@ -1,0 +1,168 @@
+{
+  "version": "1.0.0",
+  "updatedAt": "2026-05-06",
+  "components": [
+    {
+      "id": "button",
+      "name": "Button",
+      "category": "action",
+      "description": "Text button for primary and secondary actions.",
+      "variants": ["primary", "secondary", "tertiary"],
+      "props": {
+        "variant": { "type": "enum", "required": true, "options": ["primary", "secondary", "tertiary"] },
+        "size": { "type": "enum", "required": true, "options": ["sm", "md"] },
+        "status": { "type": "enum", "required": true, "options": ["Default", "Hover", "Pressed", "Disabled", "Focus", "Focused"] },
+        "label": { "type": "string", "required": true, "minLength": 1 },
+        "iconLeft": { "type": "boolean", "required": false, "default": false },
+        "iconRight": { "type": "boolean", "required": false, "default": false }
+      },
+      "intentTags": ["primary_action", "secondary_action", "navigation_action", "inline_action"],
+      "a11y": {
+        "requiresVisibleLabel": true,
+        "forbidsEmptyLabel": true
+      },
+      "storybookPaths": [
+        "Components/Button Primary",
+        "Components/Button Secondary",
+        "Components/Button Tertiary"
+      ]
+    },
+    {
+      "id": "icon-button",
+      "name": "IconButton",
+      "category": "action",
+      "description": "Icon-only button for compact actions.",
+      "variants": ["primary", "secondary", "tertiary"],
+      "props": {
+        "variant": { "type": "enum", "required": true, "options": ["primary", "secondary", "tertiary"] },
+        "size": { "type": "enum", "required": true, "options": ["sm", "md"] },
+        "status": { "type": "enum", "required": true, "options": ["Default", "Hover", "Pressed", "Disabled", "Focus", "Focused"] },
+        "ariaLabel": { "type": "string", "required": true, "minLength": 2 }
+      },
+      "intentTags": ["icon_action", "compact_action", "toolbar_action"],
+      "a11y": {
+        "requiresAriaLabel": true
+      },
+      "storybookPaths": [
+        "Components/Icon Button Primary",
+        "Components/Icon Button Secondary",
+        "Components/Icon Button Tertiary"
+      ]
+    },
+    {
+      "id": "text-input",
+      "name": "TextInput",
+      "category": "form",
+      "description": "Single-line text field with label, placeholder, helper and error states.",
+      "variants": ["default", "password", "search"],
+      "props": {
+        "variant": { "type": "enum", "required": true, "options": ["default", "password", "search"] },
+        "size": { "type": "enum", "required": true, "options": ["sm", "md"] },
+        "status": { "type": "enum", "required": true, "options": ["Default", "Hover", "Focus", "Disabled", "Error"] },
+        "label": { "type": "string", "required": true, "minLength": 1 },
+        "placeholder": { "type": "string", "required": false },
+        "value": { "type": "string", "required": false },
+        "required": { "type": "boolean", "required": false, "default": false },
+        "helperText": { "type": "string", "required": false },
+        "errorText": { "type": "string", "required": false }
+      },
+      "intentTags": ["form_input", "data_entry", "credential_input"],
+      "a11y": {
+        "requiresVisibleLabel": true,
+        "forbidsEmptyLabel": true
+      },
+      "storybookPaths": [
+        "Components/Text Input"
+      ]
+    },
+    {
+      "id": "select",
+      "name": "Select",
+      "category": "form",
+      "description": "Single-select dropdown for predefined options.",
+      "variants": ["default"],
+      "props": {
+        "variant": { "type": "enum", "required": true, "options": ["default"] },
+        "size": { "type": "enum", "required": true, "options": ["sm", "md"] },
+        "status": { "type": "enum", "required": true, "options": ["Default", "Hover", "Focus", "Disabled", "Error"] },
+        "label": { "type": "string", "required": true, "minLength": 1 },
+        "optionsCount": { "type": "enum", "required": true, "options": ["1", "2", "3", "4plus"] },
+        "placeholder": { "type": "string", "required": false },
+        "required": { "type": "boolean", "required": false, "default": false },
+        "errorText": { "type": "string", "required": false }
+      },
+      "intentTags": ["form_input", "choice_input", "data_entry"],
+      "a11y": {
+        "requiresVisibleLabel": true
+      },
+      "storybookPaths": [
+        "Components/Select"
+      ]
+    },
+    {
+      "id": "checkbox",
+      "name": "Checkbox",
+      "category": "form",
+      "description": "Boolean or multi-select option control.",
+      "variants": ["default"],
+      "props": {
+        "variant": { "type": "enum", "required": true, "options": ["default"] },
+        "size": { "type": "enum", "required": true, "options": ["sm", "md"] },
+        "status": { "type": "enum", "required": true, "options": ["Unchecked", "Checked", "Indeterminate", "Disabled"] },
+        "label": { "type": "string", "required": true, "minLength": 1 },
+        "helperText": { "type": "string", "required": false }
+      },
+      "intentTags": ["choice_input", "consent", "filter_toggle"],
+      "a11y": {
+        "requiresVisibleLabel": true
+      },
+      "storybookPaths": [
+        "Components/Checkbox"
+      ]
+    },
+    {
+      "id": "radio-group",
+      "name": "RadioGroup",
+      "category": "form",
+      "description": "Single choice from mutually exclusive options.",
+      "variants": ["default"],
+      "props": {
+        "variant": { "type": "enum", "required": true, "options": ["default"] },
+        "size": { "type": "enum", "required": true, "options": ["sm", "md"] },
+        "status": { "type": "enum", "required": true, "options": ["Default", "Disabled"] },
+        "label": { "type": "string", "required": true, "minLength": 1 },
+        "optionsCount": { "type": "enum", "required": true, "options": ["2", "3", "4plus"] },
+        "direction": { "type": "enum", "required": false, "options": ["vertical", "horizontal"] }
+      },
+      "intentTags": ["choice_input", "form_input"],
+      "a11y": {
+        "requiresGroupLabel": true
+      },
+      "storybookPaths": [
+        "Components/Radio Group"
+      ]
+    },
+    {
+      "id": "alert",
+      "name": "Alert",
+      "category": "feedback",
+      "description": "Inline status/feedback message block.",
+      "variants": ["info", "success", "warning", "error"],
+      "props": {
+        "variant": { "type": "enum", "required": true, "options": ["info", "success", "warning", "error"] },
+        "size": { "type": "enum", "required": true, "options": ["sm", "md"] },
+        "status": { "type": "enum", "required": true, "options": ["Default"] },
+        "title": { "type": "string", "required": true, "minLength": 1 },
+        "description": { "type": "string", "required": false },
+        "dismissible": { "type": "boolean", "required": false, "default": false }
+      },
+      "intentTags": ["feedback", "error_feedback", "success_feedback"],
+      "a11y": {
+        "supportsAriaLive": true
+      },
+      "storybookPaths": [
+        "Components/Alert"
+      ]
+    }
+  ]
+}

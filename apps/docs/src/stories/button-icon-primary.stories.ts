@@ -1,11 +1,14 @@
 import type { Meta, StoryObj } from '@storybook/html';
+import { renderIconButton, wrapPlayground } from '../components/buttons';
+
+const PLAYGROUND_ICON = '/iconography/circle-plus.svg';
 
 const iconByStatus: Record<'Default' | 'Hover' | 'Pressed' | 'Disabled' | 'Focus', string> = {
-  Default: 'https://www.figma.com/api/mcp/asset/84468324-2d9f-4ccd-aeb6-bdcca9aceec0',
-  Hover: 'https://www.figma.com/api/mcp/asset/c3a0eb95-a771-408b-a1c8-e48e1e9e003c',
-  Pressed: 'https://www.figma.com/api/mcp/asset/2c0b2bdb-7aee-4add-82a3-c7575379f317',
-  Disabled: 'https://www.figma.com/api/mcp/asset/03a67101-a3ee-4635-a5e8-37a467d58b6c',
-  Focus: 'https://www.figma.com/api/mcp/asset/84468324-2d9f-4ccd-aeb6-bdcca9aceec0',
+  Default: PLAYGROUND_ICON,
+  Hover: PLAYGROUND_ICON,
+  Pressed: PLAYGROUND_ICON,
+  Disabled: PLAYGROUND_ICON,
+  Focus: PLAYGROUND_ICON,
 };
 
 const figmaIconButtonPrimaryUrl =
@@ -61,22 +64,58 @@ export const Playground: Story = {
     const disabled = status === 'Disabled';
     const icon = iconByStatus[status];
     const iconSize = size === 'sm' ? 16 : 24;
-    return `
-      <button class="ds-btn ds-btn-icon-primary ds-btn-icon-${size} ${statusClass}" aria-label="Icon Button Primary" ${disabled ? 'disabled' : ''}>
-        <span class="ds-btn-icon"><img src="${icon}" alt="" width="${iconSize}" height="${iconSize}" /></span>
-      </button>
-    `;
+    return wrapPlayground(
+      renderIconButton({
+        baseClass: 'ds-btn ds-btn-icon-primary',
+        size,
+        statusClass,
+        iconSrc: icon,
+        iconSize,
+        ariaLabel: 'Icon Button Primary',
+        disabled,
+      }),
+    );
   },
 };
 
-export const States: Story = {
+export const Usage: Story = {
+  parameters: {
+    controls: { disable: true },
+    options: {
+      showToolbar: false,
+    },
+    previewTabs: {
+      canvas: { hidden: true },
+    },
+    viewMode: 'docs',
+    docs: {
+      canvas: {
+        withToolbar: false,
+      },
+      description: {
+        story: 'Guia de uso que combina estados y anatomia del Icon Button Primary.',
+      },
+    },
+  },
   render: () => `
     <section class="ds-panel">
-      <h2>Status · Icon Button Primary</h2>
-      <p class="ds-muted">Vista alineada al formato de Figma: artwork a la izquierda y especificaciones de estado/tamaño a la derecha.</p>
+      <header class="ds-detail-header">
+        <p class="ds-detail-kicker">Component detail</p>
+        <h2 class="ds-detail-title">Icon Button Primary</h2>
+        <p class="ds-detail-subtitle">Boton solo-icono para acciones primarias en barras y toolbars. Esta vista de usage combina estados visuales y anatomia tecnica en una sola pagina.</p>
+        <div class="ds-detail-meta">
+          <span class="ds-badge">Type: Icon-only action</span>
+          <span class="ds-badge">Sizes: Sm, Md</span>
+          <span class="ds-badge">States: 5</span>
+        </div>
+      </header>
+      <div class="ds-detail-section">
+        <h3>States</h3>
+        <p class="ds-muted">Vista alineada al formato de Figma: artwork a la izquierda y especificaciones de estado/tamano a la derecha.</p>
+      </div>
       <div class="ds-col ds-state-list">
         <div class="ds-state-exhibit">
-          <div class="ds-state-artwork ds-state-artwork-stack">
+          <div class="ds-state-artwork">
             <button class="ds-btn ds-btn-icon-primary ds-btn-icon-sm ds-btn-icon-primary-default" aria-label="Icon Button Primary Sm"><span class="ds-btn-icon"><img src="${iconByStatus.Default}" alt="" width="16" height="16" /></span></button>
             <button class="ds-btn ds-btn-icon-primary ds-btn-icon-md ds-btn-icon-primary-default" aria-label="Icon Button Primary Md"><span class="ds-btn-icon"><img src="${iconByStatus.Default}" alt="" width="24" height="24" /></span></button>
           </div>
@@ -89,7 +128,7 @@ export const States: Story = {
         </div>
 
         <div class="ds-state-exhibit">
-          <div class="ds-state-artwork ds-state-artwork-stack">
+          <div class="ds-state-artwork">
             <button class="ds-btn ds-btn-icon-primary ds-btn-icon-sm ds-btn-icon-primary-hover" aria-label="Icon Button Primary Sm"><span class="ds-btn-icon"><img src="${iconByStatus.Hover}" alt="" width="16" height="16" /></span></button>
             <button class="ds-btn ds-btn-icon-primary ds-btn-icon-md ds-btn-icon-primary-hover" aria-label="Icon Button Primary Md"><span class="ds-btn-icon"><img src="${iconByStatus.Hover}" alt="" width="24" height="24" /></span></button>
           </div>
@@ -101,7 +140,7 @@ export const States: Story = {
         </div>
 
         <div class="ds-state-exhibit">
-          <div class="ds-state-artwork ds-state-artwork-stack">
+          <div class="ds-state-artwork">
             <button class="ds-btn ds-btn-icon-primary ds-btn-icon-sm ds-btn-icon-primary-pressed" aria-label="Icon Button Primary Sm"><span class="ds-btn-icon"><img src="${iconByStatus.Pressed}" alt="" width="16" height="16" /></span></button>
             <button class="ds-btn ds-btn-icon-primary ds-btn-icon-md ds-btn-icon-primary-pressed" aria-label="Icon Button Primary Md"><span class="ds-btn-icon"><img src="${iconByStatus.Pressed}" alt="" width="24" height="24" /></span></button>
           </div>
@@ -113,7 +152,7 @@ export const States: Story = {
         </div>
 
         <div class="ds-state-exhibit">
-          <div class="ds-state-artwork ds-state-artwork-stack">
+          <div class="ds-state-artwork">
             <button class="ds-btn ds-btn-icon-primary ds-btn-icon-sm ds-btn-icon-primary-disabled" aria-label="Icon Button Primary Sm" disabled><span class="ds-btn-icon"><img src="${iconByStatus.Disabled}" alt="" width="16" height="16" /></span></button>
             <button class="ds-btn ds-btn-icon-primary ds-btn-icon-md ds-btn-icon-primary-disabled" aria-label="Icon Button Primary Md" disabled><span class="ds-btn-icon"><img src="${iconByStatus.Disabled}" alt="" width="24" height="24" /></span></button>
           </div>
@@ -125,7 +164,7 @@ export const States: Story = {
         </div>
 
         <div class="ds-state-exhibit">
-          <div class="ds-state-artwork ds-state-artwork-stack">
+          <div class="ds-state-artwork">
             <button class="ds-btn ds-btn-icon-primary ds-btn-icon-sm ds-btn-icon-primary-focus" aria-label="Icon Button Primary Sm"><span class="ds-btn-icon"><img src="${iconByStatus.Focus}" alt="" width="16" height="16" /></span></button>
             <button class="ds-btn ds-btn-icon-primary ds-btn-icon-md ds-btn-icon-primary-focus" aria-label="Icon Button Primary Md"><span class="ds-btn-icon"><img src="${iconByStatus.Focus}" alt="" width="24" height="24" /></span></button>
           </div>
@@ -137,15 +176,11 @@ export const States: Story = {
           </aside>
         </div>
       </div>
-    </section>
-  `,
-};
 
-export const Anatomy: Story = {
-  render: () => `
-    <section class="ds-panel">
-      <h2>Icon Button Primary anatomy</h2>
-      <p class="ds-muted">Medidas de referencia para implementar y revisar consistencia visual.</p>
+      <div class="ds-col ds-detail-section">
+        <h3>Anatomy</h3>
+        <p class="ds-muted">Medidas de referencia para implementar y revisar consistencia visual con trazabilidad directa a Figma.</p>
+      </div>
 
       <div class="ds-col">
         <h3>Figma live reference</h3>
@@ -189,7 +224,7 @@ export const Anatomy: Story = {
               <button class="ds-btn ds-btn-icon-primary ds-btn-icon-md ds-btn-icon-primary-default ds-anatomy-btn" aria-label="Icon Button Primary">
                 <span class="ds-btn-icon"><img src="${iconByStatus.Default}" alt="" width="24" height="24" /></span>
               </button>
-              <span class="ds-tag ds-tag-gap">4</span>
+              <span class="ds-tag ds-tag-gap">0</span>
               <span class="ds-tag ds-tag-top">8</span>
               <span class="ds-tag ds-tag-left">8</span>
               <span class="ds-tag ds-tag-right">8</span>
@@ -209,6 +244,20 @@ export const Anatomy: Story = {
               <li>Focus ring offset: 2px</li>
             </ul>
           </aside>
+        </div>
+      </div>
+
+      <div class="ds-col ds-detail-section">
+        <h3>Accessibility notes</h3>
+        <div class="ds-detail-a11y">
+          <article>
+            <h4>aria-label requerido</h4>
+            <p>Al no haber texto visible, el boton debe declarar siempre <span class="ds-token-inline">aria-label</span> con el proposito de la accion.</p>
+          </article>
+          <article>
+            <h4>Keyboard</h4>
+            <p>El estado <span class="ds-token-inline">Focus</span> requiere anillo visible y navegacion por tab sin perdida de contraste.</p>
+          </article>
         </div>
       </div>
     </section>

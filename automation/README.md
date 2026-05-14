@@ -5,9 +5,10 @@ This area contains the reusable operating model to automate Design System docume
 ## What belongs to automation
 
 - Agent topology and orchestration contracts: `AGENTS.md`
-- Cursor rules and skills:
+- Cursor rules, skills, and slash commands:
   - `.cursor/rules/`
   - `.cursor/skills/`
+  - `.cursor/commands/` (e.g. `add-new-component.md` → `/add-new-component` in Cursor)
 - Process and runbooks:
   - `docs/design-system-master-plan.md`
   - `docs/implementation-checklist.md`

@@ -1,0 +1,46 @@
+{
+  "id": "login-screen-v1",
+  "nodes": [
+    {
+      "componentId": "text-input",
+      "props": {
+        "variant": "default",
+        "size": "md",
+        "status": "Default",
+        "label": "Email",
+        "placeholder": "tu@email.com"
+      },
+      "intentTags": ["form_input", "credential_input"]
+    },
+    {
+      "componentId": "button",
+      "props": {
+        "variant": "primary",
+        "size": "md",
+        "status": "Default",
+        "label": "Iniciar sesion"
+      },
+      "intentTags": ["primary_action"]
+    },
+    {
+      "componentId": "button",
+      "props": {
+        "variant": "tertiary",
+        "size": "md",
+        "status": "Default",
+        "label": "Recuperar contrasena"
+      },
+      "intentTags": ["secondary_action"]
+    },
+    {
+      "componentId": "icon-button",
+      "props": {
+        "variant": "secondary",
+        "size": "sm",
+        "status": "Default",
+        "ariaLabel": "Mostrar ayuda"
+      },
+      "intentTags": ["toolbar_action"]
+    }
+  ]
+}

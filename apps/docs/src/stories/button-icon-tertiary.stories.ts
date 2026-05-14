@@ -1,26 +1,14 @@
 import type { Meta, StoryObj } from '@storybook/html';
+import { renderIconButton, wrapPlayground } from '../components/buttons';
+
+const PLAYGROUND_ICON = '/iconography/circle-plus.svg';
 
 const iconByStatusSize: Record<'Default' | 'Hover' | 'Pressed' | 'Disabled' | 'Focused', Record<'sm' | 'md', string>> = {
-  Default: {
-    sm: 'https://www.figma.com/api/mcp/asset/3b6e88c4-7e6e-49ca-900b-88cc1bcff9d4',
-    md: 'https://www.figma.com/api/mcp/asset/ce2c7ba0-a4ef-4ac1-877b-9b56ed6f08e0',
-  },
-  Hover: {
-    sm: 'https://www.figma.com/api/mcp/asset/fcf48eb8-36e0-4736-8868-2005525fd9af',
-    md: 'https://www.figma.com/api/mcp/asset/b93a4718-7dee-4f2c-9a9b-72b4a7b7b025',
-  },
-  Pressed: {
-    sm: 'https://www.figma.com/api/mcp/asset/09048490-138e-43cc-a181-c52d9915d967',
-    md: 'https://www.figma.com/api/mcp/asset/70724993-6c13-47bf-8e49-6ea6b48d6896',
-  },
-  Disabled: {
-    sm: 'https://www.figma.com/api/mcp/asset/dea4a540-b839-4c6f-bb14-db2d460da5d7',
-    md: 'https://www.figma.com/api/mcp/asset/cf5d8277-c359-41f3-87dc-35f84d0c88ab',
-  },
-  Focused: {
-    sm: 'https://www.figma.com/api/mcp/asset/3b6e88c4-7e6e-49ca-900b-88cc1bcff9d4',
-    md: 'https://www.figma.com/api/mcp/asset/ce2c7ba0-a4ef-4ac1-877b-9b56ed6f08e0',
-  },
+  Default: { sm: PLAYGROUND_ICON, md: PLAYGROUND_ICON },
+  Hover: { sm: PLAYGROUND_ICON, md: PLAYGROUND_ICON },
+  Pressed: { sm: PLAYGROUND_ICON, md: PLAYGROUND_ICON },
+  Disabled: { sm: PLAYGROUND_ICON, md: PLAYGROUND_ICON },
+  Focused: { sm: PLAYGROUND_ICON, md: PLAYGROUND_ICON },
 };
 
 const figmaIconButtonTertiaryUrl =
@@ -75,22 +63,58 @@ export const Playground: Story = {
     const disabled = status === 'Disabled';
     const icon = iconByStatusSize[status][size];
     const iconSize = size === 'sm' ? 16 : 24;
-    return `
-      <button class="ds-btn ds-btn-icon-tertiary ds-btn-icon-${size} ${statusClass}" aria-label="Icon Button Tertiary" ${disabled ? 'disabled' : ''}>
-        <span class="ds-btn-icon"><img src="${icon}" alt="" width="${iconSize}" height="${iconSize}" /></span>
-      </button>
-    `;
+    return wrapPlayground(
+      renderIconButton({
+        baseClass: 'ds-btn ds-btn-icon-tertiary',
+        size,
+        statusClass,
+        iconSrc: icon,
+        iconSize,
+        ariaLabel: 'Icon Button Tertiary',
+        disabled,
+      }),
+    );
   },
 };
 
-export const States: Story = {
+export const Usage: Story = {
+  parameters: {
+    controls: { disable: true },
+    options: {
+      showToolbar: false,
+    },
+    previewTabs: {
+      canvas: { hidden: true },
+    },
+    viewMode: 'docs',
+    docs: {
+      canvas: {
+        withToolbar: false,
+      },
+      description: {
+        story: 'Guia de uso que combina estados y anatomia del Icon Button Tertiary.',
+      },
+    },
+  },
   render: () => `
     <section class="ds-panel">
-      <h2>Status · Icon Button Tertiary</h2>
-      <p class="ds-muted">Vista alineada al formato de Figma: artwork a la izquierda y especificaciones de estado/tamaño a la derecha.</p>
+      <header class="ds-detail-header">
+        <p class="ds-detail-kicker">Component detail</p>
+        <h2 class="ds-detail-title">Icon Button Tertiary</h2>
+        <p class="ds-detail-subtitle">Boton solo-icono sin contenedor (ghost) para acciones discretas en barras y toolbars. Esta vista de usage combina estados visuales y anatomia tecnica en una sola pagina.</p>
+        <div class="ds-detail-meta">
+          <span class="ds-badge">Type: Icon-only action</span>
+          <span class="ds-badge">Sizes: Sm, Md</span>
+          <span class="ds-badge">States: 5</span>
+        </div>
+      </header>
+      <div class="ds-detail-section">
+        <h3>States</h3>
+        <p class="ds-muted">Vista alineada al formato de Figma: artwork a la izquierda y especificaciones de estado/tamano a la derecha.</p>
+      </div>
       <div class="ds-col ds-state-list">
         <div class="ds-state-exhibit">
-          <div class="ds-state-artwork ds-state-artwork-stack">
+          <div class="ds-state-artwork">
             <button class="ds-btn ds-btn-icon-tertiary ds-btn-icon-sm ds-btn-icon-tertiary-default" aria-label="Icon Button Tertiary Sm"><span class="ds-btn-icon"><img src="${iconByStatusSize.Default.sm}" alt="" width="16" height="16" /></span></button>
             <button class="ds-btn ds-btn-icon-tertiary ds-btn-icon-md ds-btn-icon-tertiary-default" aria-label="Icon Button Tertiary Md"><span class="ds-btn-icon"><img src="${iconByStatusSize.Default.md}" alt="" width="24" height="24" /></span></button>
           </div>
@@ -103,7 +127,7 @@ export const States: Story = {
         </div>
 
         <div class="ds-state-exhibit">
-          <div class="ds-state-artwork ds-state-artwork-stack">
+          <div class="ds-state-artwork">
             <button class="ds-btn ds-btn-icon-tertiary ds-btn-icon-sm ds-btn-icon-tertiary-hover" aria-label="Icon Button Tertiary Sm"><span class="ds-btn-icon"><img src="${iconByStatusSize.Hover.sm}" alt="" width="16" height="16" /></span></button>
             <button class="ds-btn ds-btn-icon-tertiary ds-btn-icon-md ds-btn-icon-tertiary-hover" aria-label="Icon Button Tertiary Md"><span class="ds-btn-icon"><img src="${iconByStatusSize.Hover.md}" alt="" width="24" height="24" /></span></button>
           </div>
@@ -116,7 +140,7 @@ export const States: Story = {
         </div>
 
         <div class="ds-state-exhibit">
-          <div class="ds-state-artwork ds-state-artwork-stack">
+          <div class="ds-state-artwork">
             <button class="ds-btn ds-btn-icon-tertiary ds-btn-icon-sm ds-btn-icon-tertiary-pressed" aria-label="Icon Button Tertiary Sm"><span class="ds-btn-icon"><img src="${iconByStatusSize.Pressed.sm}" alt="" width="16" height="16" /></span></button>
             <button class="ds-btn ds-btn-icon-tertiary ds-btn-icon-md ds-btn-icon-tertiary-pressed" aria-label="Icon Button Tertiary Md"><span class="ds-btn-icon"><img src="${iconByStatusSize.Pressed.md}" alt="" width="24" height="24" /></span></button>
           </div>
@@ -129,7 +153,7 @@ export const States: Story = {
         </div>
 
         <div class="ds-state-exhibit">
-          <div class="ds-state-artwork ds-state-artwork-stack">
+          <div class="ds-state-artwork">
             <button class="ds-btn ds-btn-icon-tertiary ds-btn-icon-sm ds-btn-icon-tertiary-disabled" aria-label="Icon Button Tertiary Sm" disabled><span class="ds-btn-icon"><img src="${iconByStatusSize.Disabled.sm}" alt="" width="16" height="16" /></span></button>
             <button class="ds-btn ds-btn-icon-tertiary ds-btn-icon-md ds-btn-icon-tertiary-disabled" aria-label="Icon Button Tertiary Md" disabled><span class="ds-btn-icon"><img src="${iconByStatusSize.Disabled.md}" alt="" width="24" height="24" /></span></button>
           </div>
@@ -142,7 +166,7 @@ export const States: Story = {
         </div>
 
         <div class="ds-state-exhibit">
-          <div class="ds-state-artwork ds-state-artwork-stack">
+          <div class="ds-state-artwork">
             <button class="ds-btn ds-btn-icon-tertiary ds-btn-icon-sm ds-btn-icon-tertiary-focused" aria-label="Icon Button Tertiary Sm"><span class="ds-btn-icon"><img src="${iconByStatusSize.Focused.sm}" alt="" width="16" height="16" /></span></button>
             <button class="ds-btn ds-btn-icon-tertiary ds-btn-icon-md ds-btn-icon-tertiary-focused" aria-label="Icon Button Tertiary Md"><span class="ds-btn-icon"><img src="${iconByStatusSize.Focused.md}" alt="" width="24" height="24" /></span></button>
           </div>
@@ -154,15 +178,11 @@ export const States: Story = {
           </aside>
         </div>
       </div>
-    </section>
-  `,
-};
 
-export const Anatomy: Story = {
-  render: () => `
-    <section class="ds-panel">
-      <h2>Icon Button Tertiary anatomy</h2>
-      <p class="ds-muted">Medidas de referencia para implementar y revisar consistencia visual.</p>
+      <div class="ds-col ds-detail-section">
+        <h3>Anatomy</h3>
+        <p class="ds-muted">Medidas de referencia para implementar y revisar consistencia visual con trazabilidad directa a Figma.</p>
+      </div>
 
       <div class="ds-col">
         <h3>Figma live reference</h3>
@@ -227,6 +247,20 @@ export const Anatomy: Story = {
               <li>Focus ring: dashed</li>
             </ul>
           </aside>
+        </div>
+      </div>
+
+      <div class="ds-col ds-detail-section">
+        <h3>Accessibility notes</h3>
+        <div class="ds-detail-a11y">
+          <article>
+            <h4>aria-label requerido</h4>
+            <p>Al no haber texto visible, el boton debe declarar siempre <span class="ds-token-inline">aria-label</span> con el proposito de la accion.</p>
+          </article>
+          <article>
+            <h4>Keyboard</h4>
+            <p>El estado <span class="ds-token-inline">Focused</span> requiere anillo visible y suficiente contraste sobre el fondo aun sin contenedor visible.</p>
+          </article>
         </div>
       </div>
     </section>

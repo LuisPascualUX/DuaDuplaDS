@@ -1,0 +1,49 @@
+{
+  "id": "profile-edit-screen-v1",
+  "nodes": [
+    {
+      "componentId": "text-input",
+      "props": {
+        "variant": "default",
+        "size": "md",
+        "status": "Default",
+        "label": "Nombre completo",
+        "placeholder": "Tu nombre"
+      },
+      "intentTags": ["form_input", "data_entry"]
+    },
+    {
+      "componentId": "select",
+      "props": {
+        "variant": "default",
+        "size": "md",
+        "status": "Default",
+        "label": "Pais",
+        "optionsCount": "4plus"
+      },
+      "intentTags": ["form_input", "choice_input"]
+    },
+    {
+      "componentId": "radio-group",
+      "props": {
+        "variant": "default",
+        "size": "md",
+        "status": "Default",
+        "label": "Modo de notificacion",
+        "optionsCount": "3",
+        "direction": "vertical"
+      },
+      "intentTags": ["form_input", "choice_input"]
+    },
+    {
+      "componentId": "button",
+      "props": {
+        "variant": "primary",
+        "size": "md",
+        "status": "Default",
+        "label": "Guardar cambios"
+      },
+      "intentTags": ["primary_action"]
+    }
+  ]
+}

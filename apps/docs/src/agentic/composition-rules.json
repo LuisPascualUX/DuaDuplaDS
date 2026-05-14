@@ -1,0 +1,95 @@
+{
+  "version": "1.0.0",
+  "rules": [
+    {
+      "id": "screen-primary-action-required",
+      "severity": "error",
+      "description": "Every interactive screen must expose one primary action.",
+      "check": {
+        "type": "intentTagCount",
+        "intentTag": "primary_action",
+        "min": 1
+      }
+    },
+    {
+      "id": "screen-primary-action-limit",
+      "severity": "warn",
+      "description": "Avoid multiple primary actions in the same viewport section.",
+      "check": {
+        "type": "intentTagCount",
+        "intentTag": "primary_action",
+        "max": 1
+      }
+    },
+    {
+      "id": "icon-button-needs-aria-label",
+      "severity": "error",
+      "description": "Icon buttons must include a non-empty ariaLabel.",
+      "check": {
+        "type": "requiredProp",
+        "componentId": "icon-button",
+        "prop": "ariaLabel"
+      }
+    },
+    {
+      "id": "button-label-required",
+      "severity": "error",
+      "description": "Text buttons must include a visible non-empty label.",
+      "check": {
+        "type": "requiredProp",
+        "componentId": "button",
+        "prop": "label"
+      }
+    },
+    {
+      "id": "text-input-label-required",
+      "severity": "error",
+      "description": "TextInput must include a visible non-empty label.",
+      "check": {
+        "type": "requiredProp",
+        "componentId": "text-input",
+        "prop": "label"
+      }
+    },
+    {
+      "id": "select-label-required",
+      "severity": "error",
+      "description": "Select must include a visible non-empty label.",
+      "check": {
+        "type": "requiredProp",
+        "componentId": "select",
+        "prop": "label"
+      }
+    },
+    {
+      "id": "checkbox-label-required",
+      "severity": "error",
+      "description": "Checkbox must include a visible non-empty label.",
+      "check": {
+        "type": "requiredProp",
+        "componentId": "checkbox",
+        "prop": "label"
+      }
+    },
+    {
+      "id": "radio-group-label-required",
+      "severity": "error",
+      "description": "RadioGroup must include a visible non-empty group label.",
+      "check": {
+        "type": "requiredProp",
+        "componentId": "radio-group",
+        "prop": "label"
+      }
+    },
+    {
+      "id": "form-must-have-input",
+      "severity": "warn",
+      "description": "Form-like screens should include at least one form input component.",
+      "check": {
+        "type": "intentTagCount",
+        "intentTag": "form_input",
+        "min": 1
+      }
+    }
+  ]
+}

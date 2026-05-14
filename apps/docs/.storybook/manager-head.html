@@ -1,0 +1,45 @@
+<style>
+  html.usage-clean-mode #storybook-panel-root {
+    display: none !important;
+  }
+</style>
+<script>
+  (function () {
+    var targetStoryId = 'components-button-primary--usage';
+    var targetStoryPath = '/story/' + targetStoryId;
+
+    function updateUsageModeClass() {
+      var params = new URLSearchParams(window.location.search);
+      var storyId = params.get('id');
+      var storyPath = params.get('path');
+      var enabled = storyPath
+        ? storyPath === targetStoryPath
+        : storyId === targetStoryId;
+      document.documentElement.classList.toggle('usage-clean-mode', enabled);
+
+      var panelRoot = document.getElementById('storybook-panel-root');
+      if (panelRoot) {
+        panelRoot.style.display = enabled ? 'none' : '';
+      }
+
+      var zoomButton =
+        document.querySelector('button[title="Zoom in"]') ||
+        document.querySelector('button[aria-label="Zoom in"]');
+      if (zoomButton) {
+        var toolbarContainer =
+          zoomButton.closest('.sb-bar') ||
+          zoomButton.closest('header') ||
+          zoomButton.parentElement;
+        if (toolbarContainer) {
+          toolbarContainer.style.display = enabled ? 'none' : '';
+        }
+      }
+    }
+
+    window.addEventListener('popstate', updateUsageModeClass);
+    window.addEventListener('hashchange', updateUsageModeClass);
+    window.addEventListener('DOMContentLoaded', updateUsageModeClass);
+    setInterval(updateUsageModeClass, 300);
+    updateUsageModeClass();
+  })();
+</script>

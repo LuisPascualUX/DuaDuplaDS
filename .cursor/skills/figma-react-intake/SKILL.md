@@ -40,3 +40,7 @@ Prepare all required context from Figma so React component implementation can st
 - At least 5 priority components selected.
 - Variant/state matrix captured for each selected component.
 - Token fallback policy documented for missing values.
+
+## Single new component (this repo)
+
+For **one** new documented component with a pasted Figma URL and full build/story coverage, prefer the orchestrated skill **`add-new-ds-component`** (`.cursor/skills/add-new-ds-component/SKILL.md`) or the Cursor command **`/add-new-component`**, which loads that skill. This intake skill remains the source for Figma URL parsing and doc artifacts; the add-new skill narrows scope to implementation in `apps/docs`.

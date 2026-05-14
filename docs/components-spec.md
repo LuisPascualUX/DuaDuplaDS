@@ -48,6 +48,10 @@ Primary action trigger for user flows.
 - One docs page with usage notes.
 - Playground must reflect interactive behavior from default state (`:hover`, `:active`, `:focus-visible`) without changing controls manually.
 
+## Runtime reference module
+- Reusable render helpers live in `apps/docs/src/components/buttons.ts`.
+- Stories consume this module in `Playground`, so developers can copy a single source of button markup composition.
+
 ## Current implementation split
 
 - `Button Primary`

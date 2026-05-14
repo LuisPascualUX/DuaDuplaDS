@@ -11,7 +11,9 @@
     "preview": "astro preview",
     "astro": "astro",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "sync-icons": "node scripts/sync-figma-icons-from-context.mjs",
+    "validate-agentic-screen": "node scripts/validate-agentic-screen.mjs"
   },
   "dependencies": {
     "astro": "^6.2.2"

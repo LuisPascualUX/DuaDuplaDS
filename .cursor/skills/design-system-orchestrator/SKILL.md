@@ -15,6 +15,7 @@ Drive the full process from design source to published documentation with explic
 1. **Discover**
    - Confirm source Figma assets: foundations, tokens, components.
    - Confirm target stack: React + Storybook + Astro + Vercel.
+   - **Single new component with URL:** delegate to skill `add-new-ds-component` (`.cursor/skills/add-new-ds-component/SKILL.md`) or `/add-new-component` in Cursor.
 2. **Plan**
    - Build a phased backlog with acceptance criteria.
    - Define dependencies and blockers per phase.

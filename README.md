@@ -7,7 +7,7 @@ This repo is intentionally split into two tracks:
 Reusable setup to automate the same workflow with other Design Systems:
 
 - agent topology: `AGENTS.md`
-- Cursor rules and skills: `.cursor/rules/`, `.cursor/skills/`
+- Cursor rules, skills, and **slash commands**: `.cursor/rules/`, `.cursor/skills/`, `.cursor/commands/` (e.g. **`/add-new-component`** plus a Figma component URL for the `ds-new-component-from-figma` workflow)
 - process and runbooks: `docs/`
 - overview: `automation/README.md`
 

@@ -48,6 +48,21 @@ This repository uses a reusable multi-agent workflow to design, build, document,
 - Runs preview and production deployment checklist.
 - Validates URLs, redirects, and docs availability.
 
+### 8) `ds-new-component-from-figma-agent`
+- **Trigger:** User runs Cursor command **`/add-new-component`**, says **“Añadir nuevo componente”**, or pastes a **Figma Design** URL to implement **one** new documented component.
+- **Inputs:** Full `figma.com/design/...` URL (ideally with `node-id=`). If missing, ask once before coding.
+- **Process:** Follow project skill **`.cursor/skills/add-new-ds-component/SKILL.md`** end-to-end (intake → `docs/components-spec.md` → `apps/docs/src/components/*.ts` → `design-system.css` → `apps/docs/src/stories/*.stories.ts` → `npm run build-storybook`).
+- **Stack note:** In **this** repository, Phase 2 output is **Storybook HTML + TypeScript render helpers** under `apps/docs`, not a separate npm React package, unless the backlog explicitly targets React extraction.
+- **Handoff:** Same contract as other agents (artifacts, evidence, risks, “Ready for next phase”).
+
+## Cursor automation (slash command)
+
+| Command | Purpose |
+|---------|---------|
+| `/add-new-component` | Injects instructions to act as `ds-new-component-from-figma-agent` and to read **`add-new-ds-component`** skill. User must supply the Figma component URL. |
+
+Supporting files: `.cursor/commands/add-new-component.md`, `.cursor/rules/ds-new-component-from-figma.mdc`, `.cursor/skills/add-new-ds-component/SKILL.md`, `checklist.md`.
+
 ## Handoff Contracts
 
 Each agent must provide:

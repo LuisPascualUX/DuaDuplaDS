@@ -1,0 +1,15 @@
+---
+description: >-
+  When adding a new Design System component from Figma, or when the user runs /add-new-component,
+  pastes a figma.com/design URL to implement a new component, or says "Añadir nuevo componente",
+  follow the project skill .cursor/skills/add-new-ds-component/SKILL.md end-to-end with token mapping
+  and Storybook Playground/States/Anatomy conventions.
+alwaysApply: false
+---
+
+# DS: nuevo componente desde Figma
+
+1. **Carga el skill** `.cursor/skills/add-new-ds-component/SKILL.md` (y su [checklist](.cursor/skills/add-new-ds-component/checklist.md) al cerrar).
+2. **Reglas obligatorias:** `design-system-process.mdc`, `figma-to-react-intake.mdc`, `storybook-component-anatomy-structure.mdc`.
+3. **Stack de implementación en este repo:** Storybook **HTML** (`@storybook/html-vite`) + módulos TypeScript que devuelven markup en `apps/docs/src/components/`, estilos en `apps/docs/src/stories/design-system.css`, historias en `apps/docs/src/stories/*.stories.ts`. Un paquete React publicado es **futuro** salvo que el usuario indique lo contrario.
+4. **Comando Cursor:** si el usuario invocó `/add-new-component`, el cuerpo del comando ya exige URL Figma y lectura del skill; no acortar fases.
