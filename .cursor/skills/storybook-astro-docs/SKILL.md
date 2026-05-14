@@ -12,6 +12,11 @@ disable-model-invocation: true
 - Creates repeatable page templates for foundations and components.
 - Enforces minimum docs coverage before deployment.
 
+## Sidebar order (this repo)
+
+- Configured in `apps/docs/.storybook/preview.ts`: `parameters.options.storySort` with roots **Foundations**, **Icons**, **Components**, then `method: 'alphabetical'` for nested groups and story names.
+- New `Meta.title` values must start with one of those three prefixes so they appear under the correct root.
+
 ## Documentation information architecture
 
 1. Foundations

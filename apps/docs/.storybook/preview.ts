@@ -5,6 +5,12 @@ const preview: Preview = {
   parameters: {
     layout: 'padded',
     controls: { expanded: true },
+    options: {
+      storySort: {
+        method: 'alphabetical',
+        order: ['Foundations', 'Icons', 'Components'],
+      },
+    },
   },
 };
 
